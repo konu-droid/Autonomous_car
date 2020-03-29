@@ -1,2 +1,2 @@
-reading_pcl_camera:serial:ti_mmwave_rospkg
--DCATKIN_DEVEL_PREFIX=/home/konu/Desktop/Autonomous_car/devel -DCMAKE_INSTALL_PREFIX=/home/konu/Desktop/Autonomous_car/install -G Unix Makefiles
+reading_pcl_camera:serial:stereo_yolo3:ti_mmwave_rospkg
+-DCATKIN_DEVEL_PREFIX=/home/konu/Github_folder/ros1/Autonomous_car/devel -DCMAKE_INSTALL_PREFIX=/home/konu/Github_folder/ros1/Autonomous_car/install -G Unix Makefiles

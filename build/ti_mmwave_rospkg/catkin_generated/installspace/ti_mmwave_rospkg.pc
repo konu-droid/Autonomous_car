@@ -1,4 +1,4 @@
-prefix=/home/konu/Desktop/Autonomous_car/install
+prefix=/home/konu/Github_folder/ros1/Autonomous_car/install
 
 Name: ti_mmwave_rospkg
 Description: Description of ti_mmwave_rospkg

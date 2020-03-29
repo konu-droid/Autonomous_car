@@ -67,14 +67,14 @@ set(ti_mmwave_rospkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ti_mmwave_rospkg_SOURCE_PREFIX /home/konu/Desktop/Autonomous_car/src/ti_mmwave_rospkg)
-  set(ti_mmwave_rospkg_DEVEL_PREFIX /home/konu/Desktop/Autonomous_car/devel)
+  set(ti_mmwave_rospkg_SOURCE_PREFIX /home/konu/Github_folder/ros1/Autonomous_car/src/ti_mmwave_rospkg)
+  set(ti_mmwave_rospkg_DEVEL_PREFIX /home/konu/Github_folder/ros1/Autonomous_car/devel)
   set(ti_mmwave_rospkg_INSTALL_PREFIX "")
   set(ti_mmwave_rospkg_PREFIX ${ti_mmwave_rospkg_DEVEL_PREFIX})
 else()
   set(ti_mmwave_rospkg_SOURCE_PREFIX "")
   set(ti_mmwave_rospkg_DEVEL_PREFIX "")
-  set(ti_mmwave_rospkg_INSTALL_PREFIX /home/konu/Desktop/Autonomous_car/install)
+  set(ti_mmwave_rospkg_INSTALL_PREFIX /home/konu/Github_folder/ros1/Autonomous_car/install)
   set(ti_mmwave_rospkg_PREFIX ${ti_mmwave_rospkg_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/konu/Desktop/Autonomous_car/install/lib;/home/konu/Desktop/Autonomous_car/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/konu/Github_folder/ros1/Autonomous_car/install/lib;/home/konu/Desktop/Autonomous_car/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

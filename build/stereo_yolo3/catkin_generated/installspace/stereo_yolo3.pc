@@ -1,8 +1,8 @@
 prefix=/home/konu/Github_folder/ros1/Autonomous_car/install
 
-Name: reading_pcl_camera
-Description: Description of reading_pcl_camera
+Name: stereo_yolo3
+Description: Description of stereo_yolo3
 Version: 0.0.0
-Cflags: -I${prefix}/include
+Cflags: 
 Libs: -L${prefix}/lib 
 Requires: 

@@ -1,4 +1,4 @@
-prefix=/home/konu/Desktop/Autonomous_car/install
+prefix=/home/konu/Github_folder/ros1/Autonomous_car/install
 
 Name: serial
 Description: Description of serial

@@ -67,14 +67,14 @@ set(ti_mmwave_rospkg_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(ti_mmwave_rospkg_SOURCE_PREFIX /home/konu/Desktop/Autonomous_car/src/ti_mmwave_rospkg)
-  set(ti_mmwave_rospkg_DEVEL_PREFIX /home/konu/Desktop/Autonomous_car/devel)
+  set(ti_mmwave_rospkg_SOURCE_PREFIX /home/konu/Github_folder/ros1/Autonomous_car/src/ti_mmwave_rospkg)
+  set(ti_mmwave_rospkg_DEVEL_PREFIX /home/konu/Github_folder/ros1/Autonomous_car/devel)
   set(ti_mmwave_rospkg_INSTALL_PREFIX "")
   set(ti_mmwave_rospkg_PREFIX ${ti_mmwave_rospkg_DEVEL_PREFIX})
 else()
   set(ti_mmwave_rospkg_SOURCE_PREFIX "")
   set(ti_mmwave_rospkg_DEVEL_PREFIX "")
-  set(ti_mmwave_rospkg_INSTALL_PREFIX /home/konu/Desktop/Autonomous_car/install)
+  set(ti_mmwave_rospkg_INSTALL_PREFIX /home/konu/Github_folder/ros1/Autonomous_car/install)
   set(ti_mmwave_rospkg_PREFIX ${ti_mmwave_rospkg_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(ti_mmwave_rospkg_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/konu/Desktop/Autonomous_car/devel/include;/home/konu/Desktop/Autonomous_car/src/ti_mmwave_rospkg/include " STREQUAL " ")
+if(NOT "/home/konu/Github_folder/ros1/Autonomous_car/devel/include;/home/konu/Github_folder/ros1/Autonomous_car/src/ti_mmwave_rospkg/include " STREQUAL " ")
   set(ti_mmwave_rospkg_INCLUDE_DIRS "")
-  set(_include_dirs "/home/konu/Desktop/Autonomous_car/devel/include;/home/konu/Desktop/Autonomous_car/src/ti_mmwave_rospkg/include")
+  set(_include_dirs "/home/konu/Github_folder/ros1/Autonomous_car/devel/include;/home/konu/Github_folder/ros1/Autonomous_car/src/ti_mmwave_rospkg/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "https://github.com/radar-lab/ti_mmwave_rospkg " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/konu/Desktop/Autonomous_car/devel/include;/home/konu/Desktop/Auton
         message(FATAL_ERROR "Project 'ti_mmwave_rospkg' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'ti_mmwave_rospkg' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/konu/Desktop/Autonomous_car/src/ti_mmwave_rospkg/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'ti_mmwave_rospkg' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/konu/Github_folder/ros1/Autonomous_car/src/ti_mmwave_rospkg/${idir}'.  ${_report}")
     endif()
     _list_append_unique(ti_mmwave_rospkg_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/konu/Desktop/Autonomous_car/devel/lib;/home/konu/Desktop/Autonomous_car/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/konu/Github_folder/ros1/Autonomous_car/devel/lib;/home/konu/Desktop/Autonomous_car/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
