@@ -1,0 +1,42 @@
+[0.061s] -- The C compiler identification is GNU 7.4.0
+[0.106s] -- The CXX compiler identification is GNU 7.4.0
+[0.110s] -- Check for working C compiler: /usr/bin/cc
+[0.159s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.160s] -- Detecting C compiler ABI info
+[0.210s] -- Detecting C compiler ABI info - done
+[0.217s] -- Detecting C compile features
+[0.364s] -- Detecting C compile features - done
+[0.366s] -- Check for working CXX compiler: /usr/bin/c++
+[0.423s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.424s] -- Detecting CXX compiler ABI info
+[0.487s] -- Detecting CXX compiler ABI info - done
+[0.493s] -- Detecting CXX compile features
+[0.736s] -- Detecting CXX compile features - done
+[0.738s] -- Using CATKIN_DEVEL_PREFIX: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/devel
+[0.738s] -- Using CMAKE_PREFIX_PATH: /opt/ros/melodic
+[0.738s] -- This workspace overlays: /opt/ros/melodic
+[0.756s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[0.757s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.757s] -- Using Debian Python package layout
+[0.757s] -- Using empy: /usr/bin/empy
+[0.861s] -- Using CATKIN_ENABLE_TESTING: ON
+[0.862s] -- Call enable_testing()
+[0.863s] -- Using CATKIN_TEST_RESULTS_DIR: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/test_results
+[0.878s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[0.878s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[0.896s] -- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+[0.897s] -- Looking for pthread.h
+[0.948s] -- Looking for pthread.h - found
+[0.948s] -- Looking for pthread_create
+[0.995s] -- Looking for pthread_create - not found
+[0.996s] -- Looking for pthread_create in pthreads
+[1.035s] -- Looking for pthread_create in pthreads - not found
+[1.036s] -- Looking for pthread_create in pthread
+[1.085s] -- Looking for pthread_create in pthread - found
+[1.086s] -- Found Threads: TRUE  
+[1.089s] -- Using Python nosetests: /usr/bin/nosetests
+[1.133s] -- catkin 0.7.20
+[1.133s] -- BUILD_SHARED_LIBS is on
+[1.312s] -- Configuring incomplete, errors occurred!
+[1.312s] See also "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/CMakeFiles/CMakeOutput.log".
+[1.312s] See also "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/CMakeFiles/CMakeError.log".

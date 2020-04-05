@@ -1,0 +1,39 @@
+[1.179s] -- The C compiler identification is GNU 7.5.0
+[1.237s] -- The CXX compiler identification is GNU 7.5.0
+[1.246s] -- Check for working C compiler: /usr/bin/cc
+[1.324s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.325s] -- Detecting C compiler ABI info
+[1.412s] -- Detecting C compiler ABI info - done
+[1.424s] -- Detecting C compile features
+[1.650s] -- Detecting C compile features - done
+[1.652s] -- Check for working CXX compiler: /usr/bin/c++
+[1.711s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.712s] -- Detecting CXX compiler ABI info
+[1.766s] -- Detecting CXX compiler ABI info - done
+[1.769s] -- Detecting CXX compile features
+[1.996s] -- Detecting CXX compile features - done
+[1.998s] -- Found ament_cmake: 0.8.2 (/opt/ros/eloquent/share/ament_cmake/cmake)
+[2.031s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[2.031s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.216s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.293s] -- Configuring done
+[2.294s] -- Generating done
+[2.295s] -- Build files have been written to: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv
+[2.380s] [36mInstall the project...[0m
+[2.387s] -- Install configuration: ""
+[2.387s] -- Execute custom install script
+[2.387s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/ament_index/resource_index/package_run_dependencies/vision_opencv
+[2.387s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/ament_index/resource_index/parent_prefix_path/vision_opencv
+[2.388s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/ament_prefix_path.sh
+[2.388s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/ament_prefix_path.dsv
+[2.388s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/path.sh
+[2.388s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/path.dsv
+[2.389s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.bash
+[2.389s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.sh
+[2.389s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.zsh
+[2.389s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.dsv
+[2.389s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/package.dsv
+[2.396s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/ament_index/resource_index/packages/vision_opencv
+[2.396s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/cmake/vision_opencvConfig.cmake
+[2.396s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/cmake/vision_opencvConfig-version.cmake
+[2.396s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/package.xml

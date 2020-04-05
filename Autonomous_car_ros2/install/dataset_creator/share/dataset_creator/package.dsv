@@ -1,0 +1,9 @@
+source;share/dataset_creator/hook/pythonpath.ps1
+source;share/dataset_creator/hook/pythonpath.dsv
+source;share/dataset_creator/hook/pythonpath.sh
+source;share/dataset_creator/hook/ament_prefix_path.ps1
+source;share/dataset_creator/hook/ament_prefix_path.dsv
+source;share/dataset_creator/hook/ament_prefix_path.sh
+source;../../build/dataset_creator/share/dataset_creator/hook/pythonpath_develop.ps1
+source;../../build/dataset_creator/share/dataset_creator/hook/pythonpath_develop.dsv
+source;../../build/dataset_creator/share/dataset_creator/hook/pythonpath_develop.sh

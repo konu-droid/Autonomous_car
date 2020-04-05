@@ -1,0 +1,14 @@
+[0.967s] running develop
+[1.112s] running egg_info
+[1.114s] writing brain.egg-info/PKG-INFO
+[1.114s] writing dependency_links to brain.egg-info/dependency_links.txt
+[1.114s] writing entry points to brain.egg-info/entry_points.txt
+[1.114s] writing requirements to brain.egg-info/requires.txt
+[1.114s] writing top-level names to brain.egg-info/top_level.txt
+[1.135s] reading manifest file 'brain.egg-info/SOURCES.txt'
+[1.136s] writing manifest file 'brain.egg-info/SOURCES.txt'
+[1.137s] running build_ext
+[1.137s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain.egg-link (link to .)
+[1.138s] 
+[1.138s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain
+[1.138s] running install_data

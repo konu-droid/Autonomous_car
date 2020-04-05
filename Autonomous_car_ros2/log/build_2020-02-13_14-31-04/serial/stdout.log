@@ -1,0 +1,19 @@
+[0.025s] -- Using CATKIN_DEVEL_PREFIX: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/devel
+[0.026s] -- Using CMAKE_PREFIX_PATH: /opt/ros/melodic
+[0.026s] -- This workspace overlays: /opt/ros/melodic
+[0.047s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[0.047s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.047s] -- Using Debian Python package layout
+[0.047s] -- Using empy: /usr/bin/empy
+[0.178s] -- Using CATKIN_ENABLE_TESTING: ON
+[0.178s] -- Call enable_testing()
+[0.178s] -- Using CATKIN_TEST_RESULTS_DIR: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/test_results
+[0.193s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[0.193s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[0.213s] -- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+[0.218s] -- Using Python nosetests: /usr/bin/nosetests
+[0.264s] -- catkin 0.7.20
+[0.264s] -- BUILD_SHARED_LIBS is on
+[0.422s] -- Configuring incomplete, errors occurred!
+[0.423s] See also "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/CMakeFiles/CMakeOutput.log".
+[0.430s] See also "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/CMakeFiles/CMakeError.log".

@@ -1,0 +1,4 @@
+[console_scripts]
+gui = gui.graphic_ui:main
+rev_cam = gui.reverse_cam:main
+

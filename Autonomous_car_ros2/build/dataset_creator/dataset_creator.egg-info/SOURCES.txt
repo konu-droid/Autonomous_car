@@ -1,0 +1,14 @@
+package.xml
+setup.cfg
+setup.py
+dataset_creator/__init__.py
+dataset_creator/gather_data.py
+dataset_creator.egg-info/PKG-INFO
+dataset_creator.egg-info/SOURCES.txt
+dataset_creator.egg-info/dependency_links.txt
+dataset_creator.egg-info/entry_points.txt
+dataset_creator.egg-info/requires.txt
+dataset_creator.egg-info/top_level.txt
+dataset_creator.egg-info/zip-safe
+launch/record_everything.launch.py
+resource/dataset_creator

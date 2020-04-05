@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+arduino_serial/__init__.py
+arduino_serial/accel.py
+arduino_serial.egg-info/PKG-INFO
+arduino_serial.egg-info/SOURCES.txt
+arduino_serial.egg-info/dependency_links.txt
+arduino_serial.egg-info/entry_points.txt
+arduino_serial.egg-info/requires.txt
+arduino_serial.egg-info/top_level.txt
+arduino_serial.egg-info/zip-safe
+resource/arduino_serial

@@ -1,0 +1,27 @@
+[0.018s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/eloquent:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge -- -j6 -l6
+[0.047s] [35m[1mScanning dependencies of target gtest_main[0m
+[0.048s] [35m[1mScanning dependencies of target cv_bridge[0m
+[0.051s] [35m[1mScanning dependencies of target gtest[0m
+[0.058s] [  6%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[0.062s] [ 12%] [32mBuilding CXX object src/CMakeFiles/cv_bridge.dir/rgb_colors.cpp.o[0m
+[0.063s] [ 18%] [32mBuilding CXX object src/CMakeFiles/cv_bridge.dir/cv_bridge.cpp.o[0m
+[0.069s] [ 25%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[0.637s] [ 31%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[0.660s] [ 31%] Built target gtest_main
+[2.390s] [ 37%] [32m[1mLinking CXX static library libgtest.a[0m
+[2.424s] [ 37%] Built target gtest
+[2.905s] [ 43%] [32m[1mLinking CXX shared library libcv_bridge.so[0m
+[3.013s] [ 43%] Built target cv_bridge
+[3.020s] [35m[1mScanning dependencies of target cv_bridge-utest[0m
+[3.020s] [35m[1mScanning dependencies of target cv_bridge_boost[0m
+[3.036s] [ 62%] [32mBuilding CXX object test/CMakeFiles/cv_bridge-utest.dir/utest.cpp.o[0m
+[3.036s] [ 62%] [32mBuilding CXX object test/CMakeFiles/cv_bridge-utest.dir/utest2.cpp.o[0m
+[3.036s] [ 68%] [32mBuilding CXX object test/CMakeFiles/cv_bridge-utest.dir/test_endian.cpp.o[0m
+[3.037s] [ 68%] [32mBuilding CXX object test/CMakeFiles/cv_bridge-utest.dir/test_compression.cpp.o[0m
+[3.040s] [ 75%] [32mBuilding CXX object test/CMakeFiles/cv_bridge-utest.dir/test_rgb_colors.cpp.o[0m
+[3.040s] [ 81%] [32mBuilding CXX object src/CMakeFiles/cv_bridge_boost.dir/module.cpp.o[0m
+[3.974s] [ 87%] [32mBuilding CXX object src/CMakeFiles/cv_bridge_boost.dir/module_opencv3.cpp.o[0m
+[4.506s] [ 93%] [32m[1mLinking CXX executable cv_bridge-utest[0m
+[4.852s] [ 93%] Built target cv_bridge-utest
+[6.075s] [100%] [32m[1mLinking CXX shared library boost/cv_bridge_boost.so[0m
+[6.166s] [100%] Built target cv_bridge_boost

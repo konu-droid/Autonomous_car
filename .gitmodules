@@ -1,0 +1,3 @@
+[submodule "Autonomous_car/src/serial"]
+	path = Autonomous_car/src/serial
+	url = https://github.com/wjwwood/serial/tree/ros2

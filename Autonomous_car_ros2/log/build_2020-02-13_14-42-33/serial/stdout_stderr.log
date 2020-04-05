@@ -1,0 +1,42 @@
+[0.025s] -- Using CATKIN_DEVEL_PREFIX: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/devel
+[0.026s] -- Using CMAKE_PREFIX_PATH: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv;/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry;/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs;/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge;/opt/ros/melodic
+[0.026s] -- This workspace overlays: /opt/ros/melodic
+[0.052s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[0.052s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.053s] -- Using Debian Python package layout
+[0.053s] -- Using empy: /usr/bin/empy
+[0.159s] -- Using CATKIN_ENABLE_TESTING: ON
+[0.159s] -- Call enable_testing()
+[0.160s] -- Using CATKIN_TEST_RESULTS_DIR: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/test_results
+[0.176s] -- Found gtest sources under '/usr/src/googletest': gtests will be built
+[0.176s] -- Found gmock sources under '/usr/src/googletest': gmock will be built
+[0.201s] -- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+[0.205s] -- Using Python nosetests: /usr/bin/nosetests
+[0.256s] -- catkin 0.7.20
+[0.256s] -- BUILD_SHARED_LIBS is on
+[0.421s] Traceback (most recent call last):
+[0.421s]   File "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/catkin_generated/generate_cached_setup.py", line 22, in <module>
+[0.421s]     code = generate_environment_script('/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/devel/env.sh')
+[0.421s]   File "/opt/ros/melodic/lib/python2.7/dist-packages/catkin/environment_cache.py", line 62, in generate_environment_script
+[0.422s]     env_after = ast.literal_eval(output.decode('utf8'))
+[0.422s]   File "/usr/lib/python3.6/ast.py", line 48, in literal_eval
+[0.422s]     node_or_string = parse(node_or_string, mode='eval')
+[0.422s]   File "/usr/lib/python3.6/ast.py", line 35, in parse
+[0.422s]     return compile(source, filename, mode, PyCF_ONLY_AST)
+[0.422s]   File "<unknown>", line 1
+[0.422s]     ROS_DISTRO was set to 'eloquent' before. Please make sure that the environment does not mix paths from different distributions.
+[0.422s]                  ^
+[0.422s] SyntaxError: invalid syntax
+[0.431s] CMake Error at /opt/ros/melodic/share/catkin/cmake/safe_execute_process.cmake:11 (message):
+[0.431s]   execute_process(/usr/bin/python3
+[0.431s]   "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/catkin_generated/generate_cached_setup.py")
+[0.431s]   returned error code 1
+[0.431s] Call Stack (most recent call first):
+[0.431s]   /opt/ros/melodic/share/catkin/cmake/all.cmake:208 (safe_execute_process)
+[0.431s]   /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:20 (include)
+[0.431s]   CMakeLists.txt:5 (find_package)
+[0.431s] 
+[0.431s] 
+[0.431s] -- Configuring incomplete, errors occurred!
+[0.431s] See also "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/CMakeFiles/CMakeOutput.log".
+[0.431s] See also "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/serial/CMakeFiles/CMakeError.log".

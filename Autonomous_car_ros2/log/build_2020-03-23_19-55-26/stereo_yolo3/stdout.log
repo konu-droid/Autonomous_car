@@ -1,0 +1,15 @@
+[0.569s] running develop
+[0.703s] running egg_info
+[0.703s] writing stereo_yolo3.egg-info/PKG-INFO
+[0.703s] writing dependency_links to stereo_yolo3.egg-info/dependency_links.txt
+[0.703s] writing entry points to stereo_yolo3.egg-info/entry_points.txt
+[0.704s] writing requirements to stereo_yolo3.egg-info/requires.txt
+[0.704s] writing top-level names to stereo_yolo3.egg-info/top_level.txt
+[0.727s] reading manifest file 'stereo_yolo3.egg-info/SOURCES.txt'
+[0.727s] writing manifest file 'stereo_yolo3.egg-info/SOURCES.txt'
+[0.729s] running build_ext
+[0.729s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3/lib/python3.6/site-packages/stereo-yolo3.egg-link (link to .)
+[0.729s] Installing stereo_image_pub script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3/lib/stereo_yolo3
+[0.729s] 
+[0.730s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3
+[0.730s] running install_data

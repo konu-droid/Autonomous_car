@@ -1,0 +1,17 @@
+[1.735s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3/lib/python3.6/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3 --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3
+[1.945s] running develop
+[2.063s] running egg_info
+[2.063s] writing stereo_yolo3.egg-info/PKG-INFO
+[2.063s] writing dependency_links to stereo_yolo3.egg-info/dependency_links.txt
+[2.063s] writing entry points to stereo_yolo3.egg-info/entry_points.txt
+[2.063s] writing requirements to stereo_yolo3.egg-info/requires.txt
+[2.063s] writing top-level names to stereo_yolo3.egg-info/top_level.txt
+[2.086s] reading manifest file 'stereo_yolo3.egg-info/SOURCES.txt'
+[2.087s] writing manifest file 'stereo_yolo3.egg-info/SOURCES.txt'
+[2.088s] running build_ext
+[2.089s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3/lib/python3.6/site-packages/stereo-yolo3.egg-link (link to .)
+[2.089s] Installing stereo_image_pub script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3/lib/stereo_yolo3
+[2.089s] 
+[2.090s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3
+[2.090s] running install_data
+[2.109s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3' returned '0': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3/lib/python3.6/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3 --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3

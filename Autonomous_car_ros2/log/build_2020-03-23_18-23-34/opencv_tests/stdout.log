@@ -1,0 +1,17 @@
+[1.405s] running develop
+[1.546s] running egg_info
+[1.546s] writing opencv_tests.egg-info/PKG-INFO
+[1.546s] writing dependency_links to opencv_tests.egg-info/dependency_links.txt
+[1.546s] writing entry points to opencv_tests.egg-info/entry_points.txt
+[1.546s] writing requirements to opencv_tests.egg-info/requires.txt
+[1.546s] writing top-level names to opencv_tests.egg-info/top_level.txt
+[1.571s] reading manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[1.572s] writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[1.573s] running build_ext
+[1.573s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/python3.6/site-packages/opencv-tests.egg-link (link to .)
+[1.574s] Installing broadcast script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[1.574s] Installing rosfacedetect script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[1.574s] Installing source script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[1.574s] 
+[1.574s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests
+[1.574s] running install_data

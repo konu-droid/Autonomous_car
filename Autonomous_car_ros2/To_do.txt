@@ -1,0 +1,9 @@
+To Do:
+
+1. Use GPS from phone code to get current location
+2. turn GPS data to directions and a vlue between 0-255 or 0-1
+3. collect data from all three pots (accel,steering,braking) using arduino and sent to cpu.
+4. make the trained netwrok work realtime with the continues data collection
+5. implement everything with ROS
+6. make GUI to appear first on startup and in the backend run all this
+6. make the radar turn on everytime reliably

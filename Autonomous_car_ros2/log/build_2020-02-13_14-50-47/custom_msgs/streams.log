@@ -1,0 +1,87 @@
+[0.023s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/opt/ros/eloquent:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs -- -j6 -l6
+[0.239s] [ 10%] Built target new_msg__cpp
+[0.240s] [ 13%] Built target new_msg__rosidl_generator_c
+[0.240s] [ 24%] Built target new_msg__rosidl_typesupport_introspection_cpp
+[0.240s] [ 34%] Built target new_msg__rosidl_typesupport_fastrtps_cpp
+[0.240s] [ 44%] Built target new_msg__rosidl_typesupport_introspection_c
+[0.240s] [ 55%] Built target new_msg__rosidl_typesupport_cpp
+[0.240s] [ 65%] Built target new_msg__rosidl_typesupport_fastrtps_c
+[0.240s] [ 75%] Built target new_msg__rosidl_typesupport_c
+[0.240s] [ 75%] Built target new_msg
+[0.240s] [ 79%] Built target new_msg__py
+[0.241s] [ 86%] Built target new_msg__python
+[0.241s] [ 96%] Built target custom_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.241s] [100%] Built target custom_msgs__rosidl_typesupport_c__pyext
+[0.441s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs' returned '0': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/opt/ros/eloquent:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs -- -j6 -l6
+[0.857s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/opt/ros/eloquent:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs --target install -- -j6 -l6
+[0.900s] [ 10%] Built target new_msg__cpp
+[0.900s] [ 13%] Built target new_msg__rosidl_generator_c
+[0.917s] [ 24%] Built target new_msg__rosidl_typesupport_introspection_cpp
+[0.919s] [ 34%] Built target new_msg__rosidl_typesupport_introspection_c
+[0.919s] [ 44%] Built target new_msg__rosidl_typesupport_fastrtps_cpp
+[0.939s] [ 55%] Built target new_msg__rosidl_typesupport_cpp
+[0.939s] [ 65%] Built target new_msg__rosidl_typesupport_fastrtps_c
+[0.960s] [ 75%] Built target new_msg__rosidl_typesupport_c
+[0.974s] [ 75%] Built target new_msg
+[0.989s] [ 79%] Built target new_msg__py
+[1.014s] [ 86%] Built target new_msg__python
+[1.034s] [ 93%] Built target custom_msgs__rosidl_typesupport_c__pyext
+[1.034s] [100%] Built target custom_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.047s] [36mInstall the project...[0m
+[1.054s] -- Install configuration: ""
+[1.054s] -- Execute custom install script
+[1.054s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs
+[1.055s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan.hpp
+[1.055s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__struct.hpp
+[1.055s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__traits.hpp
+[1.055s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan.h
+[1.055s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__functions.h
+[1.056s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__struct.h
+[1.056s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__type_support.h
+[1.056s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/rosidl_generator_c__visibility_control.h
+[1.056s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/library_path.sh
+[1.056s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/library_path.dsv
+[1.057s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_generator_c.so
+[1.057s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_typesupport_c.so
+[1.057s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_typesupport_cpp.so
+[1.058s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__rosidl_typesupport_introspection_c.h
+[1.058s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.058s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_typesupport_introspection_c.so
+[1.058s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__rosidl_typesupport_introspection_cpp.hpp
+[1.059s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_typesupport_introspection_cpp.so
+[1.059s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__rosidl_typesupport_fastrtps_c.h
+[1.059s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.059s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_typesupport_fastrtps_c.so
+[1.060s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/radar_scan__rosidl_typesupport_fastrtps_cpp.hpp
+[1.060s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/include/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.060s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__rosidl_typesupport_fastrtps_cpp.so
+[1.060s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh
+[1.061s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv
+[1.061s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/python3.6/site-packages/custom_msgs/__init__.py
+[1.061s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/python3.6/site-packages/custom_msgs/msg/__init__.py
+[1.061s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/python3.6/site-packages/custom_msgs/msg/_radar_scan.py
+[1.062s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/python3.6/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so
+[1.062s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/python3.6/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so
+[1.062s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib/libnew_msg__python.so
+[1.062s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/msg/RadarScan.idl
+[1.063s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/msg/RadarScan.msg
+[1.063s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs
+[1.063s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs
+[1.063s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh
+[1.063s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv
+[1.064s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/path.sh
+[1.064s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/environment/path.dsv
+[1.064s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/local_setup.bash
+[1.064s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/local_setup.sh
+[1.064s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/local_setup.zsh
+[1.064s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/local_setup.dsv
+[1.065s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/package.dsv
+[1.071s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs
+[1.071s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake
+[1.071s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.072s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.072s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[1.072s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake
+[1.072s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake
+[1.072s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/share/custom_msgs/package.xml
+[1.099s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs' returned '0': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/opt/ros/eloquent:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs --target install -- -j6 -l6

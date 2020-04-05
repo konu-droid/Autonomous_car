@@ -1,0 +1,8 @@
+prefix=/home/autonomous-car/Desktop/Autonomous_car/devel
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/autonomous-car/Desktop/Autonomous_car/src/serial/include
+Libs: -L${prefix}/lib -lserial -lrt -lpthread
+Requires: 

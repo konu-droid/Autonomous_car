@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/konu/Desktop/Autonomous_car_ros2/src/reading_radar/include/**",
+                "/home/konu/Desktop/Autonomous_car_ros2/src/serial-ros2/include/**",
+                "/home/konu/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/include/**",
+                "/home/konu/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,3 @@
+[console_scripts]
+Arduino_Serial = arduino_serial.accel:main
+

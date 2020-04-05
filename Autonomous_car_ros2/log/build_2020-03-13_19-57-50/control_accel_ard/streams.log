@@ -1,0 +1,16 @@
+[1.380s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/control_accel_ard': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/control_accel_ard/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard
+[1.593s] running develop
+[1.719s] running egg_info
+[1.720s] writing control_accel_ard.egg-info/PKG-INFO
+[1.720s] writing dependency_links to control_accel_ard.egg-info/dependency_links.txt
+[1.720s] writing entry points to control_accel_ard.egg-info/entry_points.txt
+[1.720s] writing requirements to control_accel_ard.egg-info/requires.txt
+[1.720s] writing top-level names to control_accel_ard.egg-info/top_level.txt
+[1.742s] reading manifest file 'control_accel_ard.egg-info/SOURCES.txt'
+[1.743s] writing manifest file 'control_accel_ard.egg-info/SOURCES.txt'
+[1.744s] running build_ext
+[1.744s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard/lib/python3.6/site-packages/control-accel-ard.egg-link (link to .)
+[1.745s] 
+[1.745s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/control_accel_ard
+[1.745s] running install_data
+[2.538s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/control_accel_ard' returned '0': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/control_accel_ard/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard

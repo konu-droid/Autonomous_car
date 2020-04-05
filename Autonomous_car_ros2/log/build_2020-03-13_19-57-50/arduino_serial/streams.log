@@ -1,0 +1,16 @@
+[1.161s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial
+[1.389s] running develop
+[1.506s] running egg_info
+[1.506s] writing arduino_serial.egg-info/PKG-INFO
+[1.506s] writing dependency_links to arduino_serial.egg-info/dependency_links.txt
+[1.506s] writing entry points to arduino_serial.egg-info/entry_points.txt
+[1.506s] writing requirements to arduino_serial.egg-info/requires.txt
+[1.506s] writing top-level names to arduino_serial.egg-info/top_level.txt
+[1.528s] reading manifest file 'arduino_serial.egg-info/SOURCES.txt'
+[1.528s] writing manifest file 'arduino_serial.egg-info/SOURCES.txt'
+[1.529s] running build_ext
+[1.529s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages/arduino-serial.egg-link (link to .)
+[1.529s] 
+[1.530s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial
+[1.530s] running install_data
+[1.553s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial' returned '0': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial

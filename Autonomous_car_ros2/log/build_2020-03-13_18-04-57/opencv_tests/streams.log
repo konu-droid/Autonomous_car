@@ -1,0 +1,19 @@
+[1.505s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/python3.6/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests
+[1.700s] running develop
+[1.821s] running egg_info
+[1.821s] writing opencv_tests.egg-info/PKG-INFO
+[1.821s] writing dependency_links to opencv_tests.egg-info/dependency_links.txt
+[1.821s] writing entry points to opencv_tests.egg-info/entry_points.txt
+[1.821s] writing requirements to opencv_tests.egg-info/requires.txt
+[1.822s] writing top-level names to opencv_tests.egg-info/top_level.txt
+[1.845s] reading manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[1.846s] writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[1.847s] running build_ext
+[1.847s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/python3.6/site-packages/opencv-tests.egg-link (link to .)
+[1.848s] Installing broadcast script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[1.848s] Installing rosfacedetect script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[1.848s] Installing source script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[1.848s] 
+[1.848s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests
+[1.848s] running install_data
+[1.870s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests' returned '0': AMENT_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/python3.6/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests

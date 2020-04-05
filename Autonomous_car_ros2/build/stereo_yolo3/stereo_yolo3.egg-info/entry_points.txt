@@ -1,0 +1,3 @@
+[console_scripts]
+stereo_image_pub = stereo_yolo3.run_this:main
+

@@ -1,0 +1,14 @@
+[0.734s] running develop
+[0.878s] running egg_info
+[0.878s] writing control_accel_ard.egg-info/PKG-INFO
+[0.879s] writing dependency_links to control_accel_ard.egg-info/dependency_links.txt
+[0.879s] writing entry points to control_accel_ard.egg-info/entry_points.txt
+[0.879s] writing requirements to control_accel_ard.egg-info/requires.txt
+[0.879s] writing top-level names to control_accel_ard.egg-info/top_level.txt
+[0.904s] reading manifest file 'control_accel_ard.egg-info/SOURCES.txt'
+[0.904s] writing manifest file 'control_accel_ard.egg-info/SOURCES.txt'
+[0.906s] running build_ext
+[0.906s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard/lib/python3.6/site-packages/control-accel-ard.egg-link (link to .)
+[0.906s] 
+[0.906s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/control_accel_ard
+[0.906s] running install_data

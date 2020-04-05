@@ -1,0 +1,74 @@
+[1.748s] -- The C compiler identification is GNU 7.5.0
+[1.922s] -- The CXX compiler identification is GNU 7.5.0
+[1.928s] -- Check for working C compiler: /usr/bin/cc
+[1.976s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.977s] -- Detecting C compiler ABI info
+[2.067s] -- Detecting C compiler ABI info - done
+[2.075s] -- Detecting C compile features
+[2.221s] -- Detecting C compile features - done
+[2.225s] -- Check for working CXX compiler: /usr/bin/c++
+[2.285s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.286s] -- Detecting CXX compiler ABI info
+[2.341s] -- Detecting CXX compiler ABI info - done
+[2.344s] -- Detecting CXX compile features
+[2.587s] -- Detecting CXX compile features - done
+[2.589s] -- Found ament_cmake_python: 0.8.2 (/opt/ros/eloquent/share/ament_cmake_python/cmake)
+[2.591s] -- Found ament_cmake_ros: 0.8.0 (/opt/ros/eloquent/share/ament_cmake_ros/cmake)
+[2.632s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[2.632s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.810s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.870s] -- Found OpenCV: /usr (found version "3.2.0") found components:  calib3d core highgui imgproc 
+[2.871s] -- Found sensor_msgs: 0.8.1 (/opt/ros/eloquent/share/sensor_msgs/cmake)
+[2.897s] -- Found rosidl_adapter: 0.8.2 (/opt/ros/eloquent/share/rosidl_adapter/cmake)
+[2.960s] -- Found gtest sources under '/opt/ros/eloquent/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[2.962s] -- Looking for pthread.h
+[3.013s] -- Looking for pthread.h - found
+[3.015s] -- Looking for pthread_create
+[3.070s] -- Looking for pthread_create - not found
+[3.071s] -- Check if compiler accepts -pthread
+[3.124s] -- Check if compiler accepts -pthread - yes
+[3.125s] -- Found Threads: TRUE  
+[3.185s] -- Configuring done
+[3.199s] -- Generating done
+[3.222s] -- Build files have been written to: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry
+[3.271s] [35m[1mScanning dependencies of target image_geometry[0m
+[3.302s] [ 33%] Built target image_geometry
+[3.306s] [ 55%] Built target gtest_main
+[3.309s] [ 77%] Built target gtest
+[3.330s] [100%] Built target image_geometry-utest
+[3.405s] [ 44%] Built target gtest
+[3.405s] [ 44%] Built target gtest_main
+[3.413s] [ 77%] Built target image_geometry
+[3.433s] [100%] Built target image_geometry-utest
+[3.447s] [36mInstall the project...[0m
+[3.454s] -- Install configuration: ""
+[3.455s] -- Execute custom install script
+[3.455s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/pythonpath.sh
+[3.456s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/pythonpath.dsv
+[3.456s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.6/site-packages/image_geometry/__init__.py
+[3.456s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.6/site-packages/image_geometry/cameramodels.py
+[3.457s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/include/image_geometry/pinhole_camera_model.h
+[3.457s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/include/image_geometry/stereo_camera_model.h
+[3.457s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/include/image_geometry/visibility_control.hpp
+[3.457s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/libimage_geometry.so
+[3.457s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/library_path.sh
+[3.458s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/library_path.dsv
+[3.458s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/ament_index/resource_index/package_run_dependencies/image_geometry
+[3.458s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/ament_index/resource_index/parent_prefix_path/image_geometry
+[3.458s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/ament_prefix_path.sh
+[3.458s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/ament_prefix_path.dsv
+[3.459s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/path.sh
+[3.459s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/path.dsv
+[3.459s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.bash
+[3.459s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.sh
+[3.459s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.zsh
+[3.460s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.dsv
+[3.460s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/package.dsv
+[3.467s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/ament_index/resource_index/packages/image_geometry
+[3.467s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_libraries-extras.cmake
+[3.467s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.468s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.468s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/image_geometryConfig.cmake
+[3.468s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/image_geometryConfig-version.cmake
+[3.468s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/package.xml
+[3.501s] Listing '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.6/site-packages/image_geometry'...

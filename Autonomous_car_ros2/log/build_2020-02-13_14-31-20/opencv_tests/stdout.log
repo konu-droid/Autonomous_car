@@ -1,0 +1,25 @@
+[0.625s] running develop
+[0.775s] running egg_info
+[0.775s] creating opencv_tests.egg-info
+[0.775s] writing opencv_tests.egg-info/PKG-INFO
+[0.775s] writing dependency_links to opencv_tests.egg-info/dependency_links.txt
+[0.775s] writing entry points to opencv_tests.egg-info/entry_points.txt
+[0.776s] writing requirements to opencv_tests.egg-info/requires.txt
+[0.776s] writing top-level names to opencv_tests.egg-info/top_level.txt
+[0.780s] writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[0.820s] reading manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[0.820s] writing manifest file 'opencv_tests.egg-info/SOURCES.txt'
+[0.823s] running build_ext
+[0.823s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/python3.6/site-packages/site.py
+[0.824s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/python3.6/site-packages/opencv-tests.egg-link (link to .)
+[0.825s] Installing broadcast script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[0.825s] Installing rosfacedetect script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[0.825s] Installing source script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/lib/opencv_tests
+[0.826s] 
+[0.826s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/opencv_tests
+[0.826s] running install_data
+[0.826s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/share/ament_index
+[0.826s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/share/ament_index/resource_index
+[0.826s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/share/ament_index/resource_index/packages
+[0.826s] copying resource/opencv_tests -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/share/ament_index/resource_index/packages
+[0.826s] copying package.xml -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests/share/opencv_tests

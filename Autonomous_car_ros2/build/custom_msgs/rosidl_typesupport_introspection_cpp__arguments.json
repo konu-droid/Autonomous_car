@@ -1,0 +1,25 @@
+{
+  "package_name": "custom_msgs",
+  "output_dir": "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs/rosidl_typesupport_introspection_cpp/custom_msgs",
+  "template_dir": "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs/rosidl_adapter/custom_msgs:msg/RadarScan.idl"
+  ],
+  "ros_interface_dependencies": [
+    "builtin_interfaces:/opt/ros/eloquent/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/eloquent/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/eloquent/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/ros/eloquent/lib/python3.6/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/eloquent/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs/rosidl_adapter/custom_msgs/msg/RadarScan.idl",
+    "/opt/ros/eloquent/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/eloquent/share/builtin_interfaces/msg/Time.idl"
+  ]
+}

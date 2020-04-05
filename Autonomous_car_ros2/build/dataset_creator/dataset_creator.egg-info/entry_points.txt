@@ -1,0 +1,3 @@
+[console_scripts]
+gather_data = dataset_creator.gather_data:main
+
