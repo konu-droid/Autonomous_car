@@ -1,8 +1,0 @@
-prefix=/home/konu/Github_folder/ros1/Autonomous_car/devel
-
-Name: ti_mmwave_rospkg
-Description: Description of ti_mmwave_rospkg
-Version: 3.3.0
-Cflags: -I/home/konu/Github_folder/ros1/Autonomous_car/devel/include -I/home/konu/Github_folder/ros1/Autonomous_car/src/ti_mmwave_rospkg/include
-Libs: -L${prefix}/lib -lmmwave
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/konu/Github_folder/ros1/Autonomous_car/install
-
-Name: stereo_yolo3
-Description: Description of stereo_yolo3
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

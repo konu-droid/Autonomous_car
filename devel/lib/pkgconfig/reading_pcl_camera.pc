@@ -1,8 +1,0 @@
-prefix=/home/konu/Github_folder/ros1/Autonomous_car/devel
-
-Name: reading_pcl_camera
-Description: Description of reading_pcl_camera
-Version: 0.0.0
-Cflags: -I/home/konu/Github_folder/ros1/Autonomous_car/devel/include
-Libs: -L${prefix}/lib 
-Requires: 

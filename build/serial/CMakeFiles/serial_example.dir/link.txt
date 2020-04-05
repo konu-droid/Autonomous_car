@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/serial_example.dir/examples/serial_example.cc.o  -o /home/konu/Desktop/Autonomous_car/devel/lib/serial/serial_example -Wl,-rpath,/home/konu/Desktop/Autonomous_car/devel/lib /home/konu/Desktop/Autonomous_car/devel/lib/libserial.so -lrt -lpthread 
