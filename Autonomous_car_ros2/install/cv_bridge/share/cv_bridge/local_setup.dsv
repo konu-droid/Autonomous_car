@@ -1,3 +1,1 @@
-source;share/cv_bridge/environment/ament_prefix_path.sh
-source;share/cv_bridge/environment/library_path.sh
-source;share/cv_bridge/environment/path.sh
+/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/local_setup.dsv

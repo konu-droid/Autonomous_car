@@ -1,7 +1,7 @@
 To Do:
 
 1. Use GPS from phone code to get current location
-2. turn GPS data to directions and a vlue between 0-255 or 0-1
+2. turn GPS data to directions and a value between 0-255 or 0-1
 3. collect data from all three pots (accel,steering,braking) using arduino and sent to cpu.
 4. make the trained netwrok work realtime with the continues data collection
 5. implement everything with ROS

@@ -1,4 +1,1 @@
-source;share/image_geometry/environment/ament_prefix_path.sh
-source;share/image_geometry/environment/library_path.sh
-source;share/image_geometry/environment/path.sh
-source;share/image_geometry/environment/pythonpath.sh
+/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/local_setup.dsv

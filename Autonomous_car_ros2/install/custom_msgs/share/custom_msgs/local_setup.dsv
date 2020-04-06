@@ -1,4 +1,1 @@
-source;share/custom_msgs/environment/ament_prefix_path.sh
-source;share/custom_msgs/environment/library_path.sh
-source;share/custom_msgs/environment/path.sh
-source;share/custom_msgs/environment/pythonpath.sh
+/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs/ament_cmake_environment_hooks/local_setup.dsv

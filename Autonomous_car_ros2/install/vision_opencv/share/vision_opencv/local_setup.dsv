@@ -1,2 +1,1 @@
-source;share/vision_opencv/environment/ament_prefix_path.sh
-source;share/vision_opencv/environment/path.sh
+/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_environment_hooks/local_setup.dsv

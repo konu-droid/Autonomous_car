@@ -5,10 +5,6 @@ import rclpy
 from rclpy.node import Node
 
 from std_msgs.msg import String
-from sensor_msgs.msg import Image
-from sensor_msgs.msg import PointCloud2
-import point_cloud2 as pc2
-from cv_bridge import CvBridge, CvBridgeError
 
 import cv2
 from datetime import datetime
