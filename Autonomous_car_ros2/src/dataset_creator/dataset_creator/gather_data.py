@@ -69,7 +69,7 @@ class radar_substriber(Node):
 
 def add_image_radar(ster_img, radar_data):
     # index of a array must be integer plus int16 for faster gpu processing
-    radar_data = radar_data.astype(np.int16)
+    radar_data = radar_data.astype(np.float16)
 
     # adjusting the range
     radar_data[..., 0][radar_data[..., 0] > 719] = 719

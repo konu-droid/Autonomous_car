@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+gather_data/__init__.py
+gather_data.egg-info/PKG-INFO
+gather_data.egg-info/SOURCES.txt
+gather_data.egg-info/dependency_links.txt
+gather_data.egg-info/entry_points.txt
+gather_data.egg-info/requires.txt
+gather_data.egg-info/top_level.txt
+gather_data.egg-info/zip-safe
+resource/gather_data

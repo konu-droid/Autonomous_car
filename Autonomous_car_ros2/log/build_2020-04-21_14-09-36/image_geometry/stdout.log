@@ -1,0 +1,4 @@
+[0.410s] [ 22%] Built target gtest_main
+[0.410s] [ 66%] Built target image_geometry
+[0.410s] [ 77%] Built target gtest
+[0.410s] [100%] Built target image_geometry-utest

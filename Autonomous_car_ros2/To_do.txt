@@ -2,8 +2,22 @@ To Do:
 
 1. Use GPS from phone code to get current location
 2. turn GPS data to directions and a value between 0-255 or 0-1
-3. collect data from all three pots (accel,steering,braking) using arduino and sent to cpu.
+3. normalize the data, but dividing the camera values by 255 and then adding the distance let the distance be in 
+   float, and in meters rather then cm, because we r using float16 any way, one more idea make the detection black
 4. make the trained netwrok work realtime with the continues data collection
 5. implement everything with ROS
 6. make GUI to appear first on startup and in the backend run all this
 6. make the radar turn on everytime reliably
+
+
+IMPORTANT:
+
+WE WILL NEED A SEPERATE PRO MINI FOR STEERING ONLY, WHICH WILL CONTROL THE RELAY OF STEERING AND WE WILL
+USE IT INTERRUPTS TO CHECK FOR POT UPDATES IN ITS VALUE.
+
+IF THAT DOESNT WORK WE WILL KEEP THE POT SEPERATE ON A RDUINO ALONG WITH OTHER POTS LIKE ACCEL, braking
+
+
+ALSO WE WILL USE A SEPERATE 4 RELAY BOARD FOR STEERING, 2 RELAY FOR DIRECTION AND THE 3RD FOR ON/OFF
+WE WILL PUT LIMIT SWITCHES ON THE 3D PRINTED GEARBOX WHICH WE USE FOR POT, SUCH THAT WHEN IT COMPLETES 
+ROTATION IN ONE DIRECTION AND REACHES THE LIMIT SWITCH IT WILL CUT THE POWER SUPLY TO THE STEERING MOTOR ( NOT STEERING ARDUINO )

@@ -1,0 +1,9 @@
+source;share/gather_data/hook/pythonpath.ps1
+source;share/gather_data/hook/pythonpath.dsv
+source;share/gather_data/hook/pythonpath.sh
+source;share/gather_data/hook/ament_prefix_path.ps1
+source;share/gather_data/hook/ament_prefix_path.dsv
+source;share/gather_data/hook/ament_prefix_path.sh
+source;../../build/gather_data/share/gather_data/hook/pythonpath_develop.ps1
+source;../../build/gather_data/share/gather_data/hook/pythonpath_develop.dsv
+source;../../build/gather_data/share/gather_data/hook/pythonpath_develop.sh

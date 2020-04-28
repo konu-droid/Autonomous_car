@@ -1,0 +1,16 @@
+[1.292s] running develop
+[1.428s] running egg_info
+[1.428s] writing gui.egg-info/PKG-INFO
+[1.428s] writing dependency_links to gui.egg-info/dependency_links.txt
+[1.428s] writing entry points to gui.egg-info/entry_points.txt
+[1.428s] writing requirements to gui.egg-info/requires.txt
+[1.428s] writing top-level names to gui.egg-info/top_level.txt
+[1.519s] reading manifest file 'gui.egg-info/SOURCES.txt'
+[1.547s] writing manifest file 'gui.egg-info/SOURCES.txt'
+[1.547s] running build_ext
+[1.547s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/python3.6/site-packages/gui.egg-link (link to .)
+[1.552s] Installing gui script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/gui
+[1.552s] Installing rev_cam script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/gui
+[1.553s] 
+[1.553s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui
+[1.553s] running install_data

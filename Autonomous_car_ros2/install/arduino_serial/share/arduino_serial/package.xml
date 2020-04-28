@@ -3,7 +3,7 @@
 <package format="3">
   <name>arduino_serial</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>"This si used to get the values from different arduinos used for accelration, Braking and steering position"</description>
   <maintainer email="autonomous-car@todo.todo">autonomous-car</maintainer>
   <license>TODO: License declaration</license>
 

@@ -1,0 +1,22 @@
+[1.184s] running develop
+[1.325s] running egg_info
+[1.326s] creating Gather_data.egg-info
+[1.326s] writing Gather_data.egg-info/PKG-INFO
+[1.326s] writing dependency_links to Gather_data.egg-info/dependency_links.txt
+[1.326s] writing entry points to Gather_data.egg-info/entry_points.txt
+[1.326s] writing requirements to Gather_data.egg-info/requires.txt
+[1.326s] writing top-level names to Gather_data.egg-info/top_level.txt
+[1.327s] writing manifest file 'Gather_data.egg-info/SOURCES.txt'
+[1.349s] reading manifest file 'Gather_data.egg-info/SOURCES.txt'
+[1.349s] writing manifest file 'Gather_data.egg-info/SOURCES.txt'
+[1.351s] running build_ext
+[1.351s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/lib/python3.6/site-packages/site.py
+[1.352s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/lib/python3.6/site-packages/Gather-data.egg-link (link to .)
+[1.352s] 
+[1.352s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/Gather_data
+[1.354s] running install_data
+[1.355s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/share/ament_index
+[1.355s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/share/ament_index/resource_index
+[1.355s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/share/ament_index/resource_index/packages
+[1.355s] copying resource/Gather_data -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/share/ament_index/resource_index/packages
+[1.355s] copying package.xml -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data/share/Gather_data

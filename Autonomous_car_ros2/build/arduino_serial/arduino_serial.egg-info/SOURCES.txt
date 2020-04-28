@@ -3,6 +3,7 @@ setup.cfg
 setup.py
 arduino_serial/__init__.py
 arduino_serial/accel.py
+arduino_serial/pot_data.py
 arduino_serial.egg-info/PKG-INFO
 arduino_serial.egg-info/SOURCES.txt
 arduino_serial.egg-info/dependency_links.txt

@@ -1,0 +1,5 @@
+[0.420s] [ 12%] Built target gtest_main
+[0.420s] [ 25%] Built target gtest
+[0.420s] [ 43%] Built target cv_bridge
+[0.420s] [ 62%] Built target cv_bridge_boost
+[0.420s] [100%] Built target cv_bridge-utest

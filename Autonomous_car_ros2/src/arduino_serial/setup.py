@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'Arduino_Serial = arduino_serial.accel:main'
+            'Arduino_Serial = arduino_serial.accel:main',
+            'Pot_Serial = arduino_serial.pot_data:main'
         ],
     },
 )
