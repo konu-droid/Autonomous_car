@@ -24,8 +24,8 @@ import os
 import sys
 from datetime import datetime
 
-desired_height = 1080
-desired_width = 720
+desired_height = 720
+desired_width = 1280
 
 
 class my_stereo_image_publisher(Node):
@@ -33,12 +33,25 @@ class my_stereo_image_publisher(Node):
     def __init__(self):
         super().__init__('my_stereo_image_publisher')
         self.img_pub = self.create_publisher(Image, 'stereo_image', 10)
-        self.i = 0
 
     def image_pub(self, data):
-        self.i += 1
+
         try:
             self.img_pub.publish(bridge.cv2_to_imgmsg(data, "mono8"))
+        except CvBridgeError as e:
+            print(e)
+
+
+class my_edge_image_publisher(Node):
+
+    def __init__(self):
+        super().__init__('my_edge_image_publisher')
+        self.ed_pub = self.create_publisher(Image, 'edge_image', 10)
+
+    def edge_pub(self, data):
+
+        try:
+            self.ed_pub.publish(bridge.cv2_to_imgmsg(data, "mono8"))
         except CvBridgeError as e:
             print(e)
 
@@ -140,10 +153,10 @@ def detect_video(model, args):
         output_path = osp.join(args.outdir, 'dete_' +
                                osp.basename(args.input).rsplit('.')[0] + '.avi')
 
-    cap1.set(3, desired_height)
-    cap1.set(4, desired_width)
-    cap2.set(3, desired_height)
-    cap2.set(4, desired_width)
+    cap1.set(3, desired_width)
+    cap1.set(4, desired_height)
+    cap2.set(3, desired_width)
+    cap2.set(4, desired_height)
     width, height = int(cap1.get(3))*2, int(cap1.get(4))
     fps = cap1.get(cv2.CAP_PROP_FPS)
     print(width)
@@ -159,6 +172,11 @@ def detect_video(model, args):
         retflag, frame1 = cap1.read()
         retflag2, frame2 = cap2.read()
         frame = np.concatenate((frame1, frame2), axis=1)
+
+        # edge detection
+        edge = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        edge = cv2.Canny(edge, 100, 200)
+
         read_frames += 1
         if retflag:
             frame_tensor = cv_image2tensor(frame, input_size).unsqueeze(0)
@@ -186,6 +204,7 @@ def detect_video(model, args):
             gray_scale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             out.write(frame)
             stereo_image_pub.image_pub(gray_scale)
+            edge_pubs.edge_pub(edge)
 
             '''
             if read_frames % 30 == 0:
@@ -281,11 +300,12 @@ def main():
     # ros code
     rclpy.init()
 
-    global stereo_image_pub, bridge, brake_pubs, msg
+    global stereo_image_pub, bridge, brake_pubs, msg, edge_pubs
 
     msg = String()
     #brake_pubs = brake_publisher()
     stereo_image_pub = my_stereo_image_publisher()
+    edge_pubs = my_edge_image_publisher()
     bridge = CvBridge()
 
     if args.video:
@@ -295,6 +315,7 @@ def main():
         detect_image(model, args)
 
     stereo_image_pub.destroy_node()
+    edge_pubs.destroy_node()
     # brake_pubs.destroy_node()
     rclpy.shutdown()
 

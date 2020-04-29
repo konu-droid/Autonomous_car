@@ -8,6 +8,7 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
+from std_msgs.msg import Int16MultiArray
 from sensor_msgs.msg import PointCloud2
 import point_cloud2 as pc2
 from cv_bridge import CvBridge, CvBridgeError
@@ -49,6 +50,39 @@ class stereo_substriber(Node):
         cv_image = bridge.imgmsg_to_cv2(data, "mono8")
 
 
+class edge_substriber(Node):
+    def __init__(self):
+        super().__init__('edge_graber')
+
+        # reading stereo image data
+        self.edge_sub = self.create_subscription(
+            Image, '/edge_image', self.edge_callback, 10)
+
+        # To prevent unused variable warning
+        self.edge_sub
+
+    def edge_callback(self, data):
+        bridge = CvBridge()
+        global edge_image
+        edge_image = bridge.imgmsg_to_cv2(data, "mono8")
+
+
+class ard_substriber(Node):
+    def __init__(self):
+        super().__init__('ard_serial_graber')
+
+        # reading stereo image data
+        self.ard_sub = self.create_subscription(
+            Int16MultiArray, '/pot_data_pub', self.ard_callback, 10)
+
+        # To prevent unused variable warning
+        self.ard_sub
+
+    def ard_callback(self, data):
+        global ard_data
+        ard_data = data
+
+
 class radar_substriber(Node):
     def __init__(self):
         super().__init__('radar_graber')
@@ -67,20 +101,17 @@ class radar_substriber(Node):
         radar_data = pc2.pointcloud2_to_xyz_array(pointcloud, remove_nans=True)
 
 
-def add_image_radar(ster_img, radar_data):
+def add_image_radar(img, radar_data):
     # index of a array must be integer plus int16 for faster gpu processing
     radar_data = radar_data.astype(np.float16)
 
     # adjusting the range
-    radar_data[..., 0][radar_data[..., 0] > 719] = 719
-    radar_data[..., 1][radar_data[..., 1] > 1079] = 1079
+    radar_data[..., 0][radar_data[..., 0] > height] = height
+    radar_data[..., 1][radar_data[..., 1] > width*2] = width*2
 
-    ster_img[radar_data[..., 0], radar_data[..., 1]] = radar_data[..., 2] + 255
-    # for the second camera image
-    ster_img[radar_data[..., 0], radar_data[..., 1] +
-             1079] = radar_data[..., 2] + 255
+    img[radar_data[..., 0], radar_data[..., 1]] = + radar_data[..., 2]
 
-    return ster_img
+    return img
 
 
 def main():
@@ -95,32 +126,33 @@ def main():
 
         rclpy.init()
 
-        global radar_subs, stereo_subs, bridge, store
+        global radar_subs, stereo_subs, edge_subs, ard_subs, bridge, store
 
         radar_subs = radar_substriber()
         stereo_subs = stereo_substriber()
+        edge_subs = edge_substriber()
+        ard_subs = ard_substriber()
         bridge = CvBridge()
 
         count = 0
         count2 = 0
-        store = np.zeros((record_length, (height*width*2) +
-                          len_ard_data), dtype=np.int16)
+        store = np.zeros((record_length, (height*width*2)*2 +
+                          len_ard_data), dtype=np.float16)
 
         while True:
-            rclpy.spin_once(stereo_subs)
+            rclpy.spin_once(ard_subs)
+            rclpy.spin_once(edge_subs)
             rclpy.spin_once(radar_subs)
+            rclpy.spin_once(stereo_subs)
 
-            data_99 = add_image_radar(cv_image, radar_data)
+            # normalization
+            cv_image = np.divide(cv_image, 255)
+            edge_image = np.divide(edge_image, 255)
+
+            data_99 = np.append(cv_image, add_image_radar(edge_image, radar_data))
             data = np.reshape(data_99, -1)
 
-            '''
-            ser.write(b'm')
-            for i in 3:
-                arduinoData = ser.readline().decode()
-                data_1[i] = int(arduinoData)
-            '''
-
-            data_1 = [1, 2, 3]
+            data_1 = ard_data
             store[count, :] = np.append(data, data_1)
             # print(store)
             count = count+1

@@ -1,9 +1,11 @@
 To Do:
 
 1. Use GPS from phone code to get current location
-2. turn GPS data to directions and a value between 0-255 or 0-1
+2. turn GPS data to directions and a value between 0-255
+3. add canny edge detection
 3. normalize the data, but dividing the camera values by 255 and then adding the distance let the distance be in 
-   float, and in meters rather then cm, because we r using float16 any way, one more idea make the detection black
+   float, and in meters rather then cm, because we r using float16 any way, one good idea is just to add  meters to grayscale
+   after they r normalized since then anything under 1 meter will be a pixel value but anything over that will be radar data for NN
 4. make the trained netwrok work realtime with the continues data collection
 5. implement everything with ROS
 6. make GUI to appear first on startup and in the backend run all this

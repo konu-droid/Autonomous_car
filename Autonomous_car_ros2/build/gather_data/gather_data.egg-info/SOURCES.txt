@@ -2,6 +2,7 @@ package.xml
 setup.cfg
 setup.py
 gather_data/__init__.py
+gather_data/gather_data.py
 gather_data.egg-info/PKG-INFO
 gather_data.egg-info/SOURCES.txt
 gather_data.egg-info/dependency_links.txt
