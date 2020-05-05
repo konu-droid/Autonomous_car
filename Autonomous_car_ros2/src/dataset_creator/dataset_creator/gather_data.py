@@ -19,16 +19,13 @@ import numpy as np
 import pickle
 from time import sleep
 
-# for arduino
-import serial
-
 # set these according to run_this.py present in stereo_yolo3
 fps = 60
 width = 1280
 height = 720
 len_ard_data = 3
 
-record_length = 1000
+record_length = 500
 
 store_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data'
 
@@ -101,17 +98,31 @@ class radar_substriber(Node):
         radar_data = pc2.pointcloud2_to_xyz_array(pointcloud, remove_nans=True)
 
 
-def add_image_radar(img, radar_data):
-    # index of a array must be integer plus int16 for faster gpu processing
-    radar_data = radar_data.astype(np.float16)
+def add_image_radar(img, img2, radar_data):
+
+    #For faster compute
+    img = img.astype(np.float16)
+    img2 = img2.astype(np.float16)
+
+    #Normalization
+    img = np.divide(img, 255)
+    img2 = np.divide(img2, 255)
+
+    #had to copy it since float cant be index and we need meters as z axis, plus the array is pretty small radar doesnt pick many points
+    radar_data1 = radar_data.astype(np.float16)
+
+    # index of a array must be integer plus int16 for faster gpu processing, note: tried to change the dtype of just z axis but not possible
+    radar_data = radar_data.astype(np.int16)
 
     # adjusting the range
-    radar_data[..., 0][radar_data[..., 0] > height] = height
-    radar_data[..., 1][radar_data[..., 1] > width*2] = width*2
+    radar_data[..., 0][radar_data[..., 0] > height] = height - 1
+    radar_data[..., 1][radar_data[..., 1] > width*2] = width*2 - 1
 
-    img[radar_data[..., 0], radar_data[..., 1]] = + radar_data[..., 2]
+    img2[radar_data[..., 0], radar_data[..., 1]] = + radar_data1[..., 2]
 
-    return img
+    data = np.append(img,img2)
+
+    return data
 
 
 def main():
@@ -121,9 +132,6 @@ def main():
 
     try:
 
-        # arduino-serial
-        #ser = serial.Serial('COM3',baudrate = 9600,timeout=1)
-
         rclpy.init()
 
         global radar_subs, stereo_subs, edge_subs, ard_subs, bridge, store
@@ -131,7 +139,7 @@ def main():
         radar_subs = radar_substriber()
         stereo_subs = stereo_substriber()
         edge_subs = edge_substriber()
-        ard_subs = ard_substriber()
+        #ard_subs = ard_substriber()
         bridge = CvBridge()
 
         count = 0
@@ -140,19 +148,19 @@ def main():
                           len_ard_data), dtype=np.float16)
 
         while True:
-            rclpy.spin_once(ard_subs)
+            
+            #rclpy.spin_once(ard_subs)
             rclpy.spin_once(edge_subs)
             rclpy.spin_once(radar_subs)
             rclpy.spin_once(stereo_subs)
 
-            # normalization
-            cv_image = np.divide(cv_image, 255)
-            edge_image = np.divide(edge_image, 255)
-
-            data_99 = np.append(cv_image, add_image_radar(edge_image, radar_data))
+            # normalization and sensor fusion
+            data_99 = add_image_radar(cv_image,edge_image,radar_data)
             data = np.reshape(data_99, -1)
 
-            data_1 = ard_data
+            #data_1 = ard_data
+            data_1 = [1,2,3]
+
             store[count, :] = np.append(data, data_1)
             # print(store)
             count = count+1
@@ -182,6 +190,7 @@ def main():
     except KeyboardInterrupt:
         stereo_subs.destroy_node()
         radar_subs.destroy_node()
+        edge_subs.destroy_node()
         rclpy.shutdown()
         now = datetime.now()
 

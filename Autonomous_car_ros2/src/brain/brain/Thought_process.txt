@@ -1,0 +1,26 @@
+My first approach:
+
+* i choose rnn over lstm since rnn in pytorch offered relu whereas lstm only offered tanh.
+* the second reason was lstm i had to fix a length of memory, but i thought it would be better if either it is just 2 frames of memory which is possible by rnn or if i could make the memory length variable relative tot eh speed of the vehicle
+
+* Used yolov3 and detected a bunch of useful stuff on road and converted the image to grayscale
+* had a radar sensor from texas instruments and made a point cloud ( density was very low )
+* then combined these two values info a single image by simple replacing the pixels with distance deteced where ever necessary.
+* added the direction we have to turn (range -1.0 to 1.0 ), value of acceleration (range 0.0-1.0), value of braking (range 0.0-1.0) and position of steering (rage 0.0-1.0)  
+
+* The memory on gpu was full from this very small network was made, due to high resolution of images from two cameras
+
+
+
+Second approach:
+
+* Added a edge detection image of the same size as the objection detection.
+* Instead of addingthe radar data to the object detecion image added it to edge detection since it made more sense and now the distances will be more promenent
+
+
+Third Approach:
+
+* Gonna seperate the network for object detection image, radar+edge image and the aceel+steering_pos+direction (the smaller values)
+* i think this makes more sense since now the endge image data doesnt have to compete with object data which is a huge image with many many meaningful pixels, this approach should help better identify the details in each network.
+* first the output was just single outoput of accel val,breaking val and steering positon val but now each network will create these three values and then we will combine all these values into a fourth network, can amke it deeper and this deeper network can use the data to better output the values of aceel,brake and steeering. 
+

@@ -37,7 +37,7 @@ width = 1280
 height = 720
 len_ard_data = 3
 
-record_length = 1000
+record_length = 500
 
 save_net_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn_net.pth'
 
@@ -91,7 +91,7 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(torch.cuda.is_available())
 
-    Input_size = (height*width*2)+len_ard_data
+    Input_size = (height*width*2)*2 + len_ard_data
     H1_size = 100
     H2_size = 500
     H3_size = 500
