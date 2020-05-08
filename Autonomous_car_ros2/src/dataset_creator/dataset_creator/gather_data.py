@@ -27,7 +27,7 @@ len_ard_data = 3
 
 record_length = 500
 
-store_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data'
+store_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data/'
 
 
 class stereo_substriber(Node):

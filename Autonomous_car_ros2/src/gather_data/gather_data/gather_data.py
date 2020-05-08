@@ -76,7 +76,7 @@ def add_image_radar(ster_img, radar_data):
 
     # adjusting the range
     radar_data[..., 0][radar_data[..., 0] > height] = height
-    radar_data[..., 1][radar_data[..., 1] > width = width
+    radar_data[..., 1][radar_data[..., 1] > width] = width
 
     ster_img[radar_data[..., 0], radar_data[..., 1]] = radar_data[..., 2] + 255
     # for the second camera image
@@ -91,7 +91,6 @@ def main():
     # from the command line, so that the code can do the pickle operation
     # and shutdown properly
 
-    
 
     try:
 
@@ -137,7 +136,7 @@ def main():
         stereo_subs.destroy_node()
         radar_subs.destroy_node()
         rclpy.shutdown()
-        now = datetime.now()
+        
 
 
 if __name__ == '__main__':

@@ -51,7 +51,7 @@ class RNN(nn.Module):
         self.hidden1 = nn.RNN(
             input_size=H1_size,
             hidden_size=H2_size,
-            num_layers=2,
+            num_layers=3,
             nonlinearity='relu'
         )
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
     print(torch.cuda.is_available())
 
     Input_size = (height*width*2)*2 + len_ard_data
-    H1_size = 100
+    H1_size = 50
     H2_size = 500
     H3_size = 500
     Out_size = 3
@@ -111,13 +111,13 @@ if __name__ == '__main__':
     rnn.cuda()
 
     # dump information to this variable
-    store = np.zeros((record_length, (height*width*2) +
-                      len_ard_data), dtype=np.int16)
+    store = np.zeros((record_length, (height*width*2)*2 +
+                      len_ard_data), dtype=np.float16)
 
-    for i in range(1000):
+    for i in range(100):
 
         store = np.load(
-            '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/'+str(i)+'.npy')
+            '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data/'+str(i)+'.npy')
 
         input_a = torch.from_numpy(store)
         input_a = input_a.reshape(record_length,1, 1, Input_size).half()
@@ -127,10 +127,10 @@ if __name__ == '__main__':
 
         # loss func and optimizer
         criterion = torch.nn.MSELoss().half()
-        optimizer = torch.optim.Adam(rnn.parameters(), lr=0.0001, eps=1e-08)
+        optimizer = torch.optim.Adam(rnn.parameters(), lr=0.0001)
 
         # make a loop from here
-        for j in range(998):
+        for j in range(record_length - 2):
             with autograd.detect_anomaly():
 
                 # making the model ready for half precission

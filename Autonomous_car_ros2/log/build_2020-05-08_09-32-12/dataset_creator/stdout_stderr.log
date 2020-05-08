@@ -1,0 +1,20 @@
+[1.292s] running develop
+[1.928s] running egg_info
+[1.929s] writing /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/PKG-INFO
+[1.929s] writing dependency_links to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/dependency_links.txt
+[1.929s] writing entry points to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/entry_points.txt
+[1.929s] writing requirements to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/requires.txt
+[1.929s] writing top-level names to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/top_level.txt
+[1.955s] reading manifest file '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/SOURCES.txt'
+[1.957s] writing manifest file '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info/SOURCES.txt'
+[1.957s] running build
+[1.957s] running build_py
+[1.957s] running install
+[1.957s] running install_lib
+[1.958s] running install_data
+[1.958s] running install_egg_info
+[1.960s] removing '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.6/site-packages/dataset_creator-0.0.0-py3.6.egg-info' (and everything under it)
+[1.960s] Copying /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/dataset_creator.egg-info to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.6/site-packages/dataset_creator-0.0.0-py3.6.egg-info
+[1.960s] running install_scripts
+[1.974s] Installing gather_data script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/dataset_creator
+[1.975s] writing list of installed files to '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/install.log'

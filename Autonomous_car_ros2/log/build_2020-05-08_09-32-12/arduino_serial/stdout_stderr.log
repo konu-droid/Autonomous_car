@@ -1,0 +1,21 @@
+[0.809s] running develop
+[1.835s] running egg_info
+[1.835s] writing /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/PKG-INFO
+[1.835s] writing dependency_links to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/dependency_links.txt
+[1.835s] writing entry points to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/entry_points.txt
+[1.835s] writing requirements to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/requires.txt
+[1.836s] writing top-level names to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/top_level.txt
+[1.851s] reading manifest file '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/SOURCES.txt'
+[1.851s] writing manifest file '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info/SOURCES.txt'
+[1.851s] running build
+[1.852s] running build_py
+[1.852s] running install
+[1.852s] running install_lib
+[1.852s] running install_data
+[1.852s] running install_egg_info
+[1.852s] removing '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages/arduino_serial-0.0.0-py3.6.egg-info' (and everything under it)
+[1.852s] Copying /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/arduino_serial.egg-info to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages/arduino_serial-0.0.0-py3.6.egg-info
+[1.853s] running install_scripts
+[1.867s] Installing Arduino_Serial script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/arduino_serial
+[1.867s] Installing Pot_Serial script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/arduino_serial
+[1.868s] writing list of installed files to '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/install.log'
