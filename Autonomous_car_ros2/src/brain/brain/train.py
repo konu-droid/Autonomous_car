@@ -18,6 +18,10 @@ so now i will make sure it update slow and also using leaky relu could have help
 
 3. when the learning rate was high, relu allowed the values to become infinite and then nan,
 so a normalization was required
+
+4. Tried to use convolutional layers as well along with rnn but, the result were not good insce the GPU doesnt have much 
+space for that, convolution basically works by creating features maps it dont just compress image, it compresses image
+but it also need a lot of these compressed images ( feature maps ) to work its magic, cant work with just one feature map
 '''
 
 import torch
@@ -32,6 +36,8 @@ import numpy as np
 import pickle
 from time import sleep
 import os
+
+scaling_factor = 0.75
 
 width = 1280
 height = 720
@@ -61,8 +67,7 @@ class RNN(nn.Module):
 
     def forward(self, x, h_1):
 
-        input_layer = self.IN(x)
-        input_layer = F.relu(input_layer)
+        input_layer = F.relu(self.IN(x))
 
         '''
         #one of the method to do it
@@ -79,8 +84,7 @@ class RNN(nn.Module):
         # rnn layer
         h_2, h_n = self.hidden1(input_layer, h_1)
 
-        h_3 = self.hidden2(h_2)
-        h_3 = F.relu(h_3)
+        h_3 = F.relu(self.hidden2(h_2))
         out_l = self.out(h_3)
 
         return out_l, h_n
@@ -91,14 +95,14 @@ if __name__ == '__main__':
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(torch.cuda.is_available())
 
-    Input_size = (height*width*2)*2 + len_ard_data
-    H1_size = 50
+    Input_size = int((height*scaling_factor)*(width*scaling_factor*2)*2) + len_ard_data
+    H1_size = 60
     H2_size = 500
     H3_size = 500
     Out_size = 3
 
     rnn = RNN(Input_size, H1_size, H2_size,
-              H3_size, Out_size).half()
+              H3_size, Out_size)
 
     # load_network
     #rnn = torch.load(save_net_path)
@@ -111,8 +115,7 @@ if __name__ == '__main__':
     rnn.cuda()
 
     # dump information to this variable
-    store = np.zeros((record_length, (height*width*2)*2 +
-                      len_ard_data), dtype=np.float16)
+    store = np.zeros((record_length, Input_size), dtype=np.float16)
 
     for i in range(100):
 
@@ -147,6 +150,7 @@ if __name__ == '__main__':
                 target = torch.ones([1, 5], dtype=torch.float16)
                 target = target.reshape(1, 1, Out_size).half().cuda()
                 '''
+
                 output, h_n = rnn(input_a[j].cuda(), None)
 
                 '''
