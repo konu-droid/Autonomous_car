@@ -153,8 +153,8 @@ def add_image_radar(img, img2, radar_data):
     radar_data = radar_data.astype(np.int16)
 
     # adjusting the range
-    radar_data[..., 0][radar_data[..., 0] > height*scaling_factor] = height*scaling_factor - 1
-    radar_data[..., 1][radar_data[..., 1] > width*scaling_factor*2] = width*scaling_factor*2 - 1
+    radar_data[..., 0][radar_data[..., 0] >= height*scaling_factor] = (height*scaling_factor - 1)
+    radar_data[..., 1][radar_data[..., 1] >= width*scaling_factor*2] = (width*scaling_factor*2 - 1) 
 
     img2[radar_data[..., 0], radar_data[..., 1]] = + radar_data1[..., 2]
 
@@ -207,49 +207,80 @@ def main():
               H3_size, Out_size)
 
     # puting the network in gpu
-    rnn.cuda()
+    rnn.half().cuda()
 
-    try:
+    rclpy.init()
 
-        rclpy.init()
+    global radar_subs, stereo_subs, edge_subs, ard_subs, bridge, store
 
-        global radar_subs, stereo_subs, edge_subs, ard_subs, bridge, store
+    radar_subs = radar_substriber()
+    stereo_subs = stereo_substriber()
+    edge_subs = edge_substriber()
+    #ard_subs = ard_substriber()
+    bridge = CvBridge()
 
-        radar_subs = radar_substriber()
-        stereo_subs = stereo_substriber()
-        edge_subs = edge_substriber()
-        #ard_subs = ard_substriber()
-        bridge = CvBridge()
+    count = 0
+    count2 = 0
+    store = np.zeros((int((height*scaling_factor)*(width*scaling_factor)*2)*2 + len_ard_data), dtype=np.float16)
 
-        count = 0
-        count2 = 0
-        store = np.zeros((int((height*scaling_factor)*(width*scaling_factor)*2)*2 + len_ard_data), dtype=np.float16)
+    h_n = None
 
-        h_n = None
+    start = datetime.now()
 
-        while True:
+    for i in range(500):
+
+        rnn.zero_grad()
             
-            #rclpy.spin_once(ard_subs)
-            rclpy.spin_once(edge_subs)
-            rclpy.spin_once(radar_subs)
-            rclpy.spin_once(stereo_subs)
+        #rclpy.spin_once(ard_subs)
+        rclpy.spin_once(edge_subs)
+        rclpy.spin_once(radar_subs)
+        rclpy.spin_once(stereo_subs)
 
-            # normalization and sensor fusion
-            data_99 = add_image_radar(cv_image,edge_image,radar_data)
-            data_99 = np.reshape(data_99, -1)
+        # normalization and sensor fusion
+        data_99 = add_image_radar(cv_image,edge_image,radar_data)
+        data_99 = np.reshape(data_99, -1)
 
-            #data_1 = ard_data
-            #please normalize
-            data_1 = [1,2,3]
+        #data_1 = ard_data
+        #please normalize
+        data_1 = [1,2,3]
 
-            data = np.append(data, data_1)
-            print(data.shape)
+        data = np.append(data_99, data_1)
+        input = torch.from_numpy(data)
 
-            #make a loop from here
-            output,h_n = rnn(data,h_n)
+        #this doesnt fill up the gpu ram, since i checked and its only allocated once
+        input = input.reshape(1, 1, Input_size).half()
 
-            print(output)
+        input = input.cuda()
 
+
+        #The variables output and h_n were filling up the gpu
+        #since these were directly generated they had required_grad = True
+        #So with torch.no_grad() helps save the gpu ram by not recording these
+        with torch.no_grad():
+            output,h_n = rnn(input,h_n)
+
+            '''
+            #debuging the variable problem
+            print(output.requires_grad)
+            print(input.grad_fn)
+            print(h_n.grad_fn)
+            '''
+
+        #print("output")
+        print(output)
+        
+
+        '''
+
+        del output,input
+
+        torch.cuda.empty_cache()
+        '''
+
+    done = datetime.now()
+
+    time_taken = done - start
+    print(str(time_taken) + "  Divide by 300")
 
 if __name__ == '__main__':
     main()

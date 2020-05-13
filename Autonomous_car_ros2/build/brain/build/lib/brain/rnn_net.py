@@ -47,19 +47,22 @@ import numpy as np
 import pickle
 from time import sleep
 
-#lib for NN
+# lib for NN
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-# set these according to run_this.py present in stereo_yolo3
-fps = 60
+# set these according to gather_data.py 
+scaling_factor = 0.75
+
 width = 1280
 height = 720
 len_ard_data = 3
 
 record_length = 500
+
+save_net_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn_net.pth'
 
 class stereo_substriber(Node):
     def __init__(self):
@@ -131,6 +134,10 @@ class radar_substriber(Node):
 
 def add_image_radar(img, img2, radar_data):
 
+    #resized (for a bigger network size)
+    img = cv2.resize(img, (0,0), fx=scaling_factor, fy=scaling_factor)
+    img2 = cv2.resize(img2, (0,0), fx=scaling_factor, fy=scaling_factor)
+
     #For faster compute
     img = img.astype(np.float16)
     img2 = img2.astype(np.float16)
@@ -146,8 +153,8 @@ def add_image_radar(img, img2, radar_data):
     radar_data = radar_data.astype(np.int16)
 
     # adjusting the range
-    radar_data[..., 0][radar_data[..., 0] > height] = height - 1
-    radar_data[..., 1][radar_data[..., 1] > width*2] = width*2 - 1
+    radar_data[..., 0][radar_data[..., 0] > height*scaling_factor] = height*scaling_factor - 1
+    radar_data[..., 1][radar_data[..., 1] > width*scaling_factor*2] = width*scaling_factor*2 - 1
 
     img2[radar_data[..., 0], radar_data[..., 1]] = + radar_data1[..., 2]
 
@@ -165,7 +172,7 @@ class RNN(nn.Module):
         self.hidden1 = nn.RNN(
             input_size=H1_size,
             hidden_size=H2_size,
-            num_layers=2,
+            num_layers=3,
             nonlinearity='relu'
         )
 
@@ -175,60 +182,76 @@ class RNN(nn.Module):
 
     def forward(self, x, h_1):
 
-        input_layer = self.IN(x)
-        input_layer = F.relu(input_layer)
-
-        '''
-        #one of the method to do it
-        # Initialize hidden state with zeros
-        # (layer_dim, batch_size, hidden_dim)
-        h0 = torch.zeros(1, x.size(0), 40).cuda()
-
-        # We need to detach the hidden state to prevent exploding/vanishing gradients
-        # This is part of truncated backpropagation through time (BPTT)
-        # rnn layer
-        h_2, h_n = self.hidden1(input_layer, h0.detach())
-        '''
+        input_layer = F.relu(self.IN(x))
 
         # rnn layer
         h_2, h_n = self.hidden1(input_layer, h_1)
 
-        h_3 = self.hidden2(h_2)
-        h_3 = F.relu(h_3)
+        h_3 = F.relu(self.hidden2(h_2))
         out_l = self.out(h_3)
 
         return out_l, h_n
 
+def main():
+
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    print(torch.cuda.is_available())
+
+    Input_size = int((height*scaling_factor)*(width*scaling_factor*2)*2) + len_ard_data
+    H1_size = 60
+    H2_size = 500
+    H3_size = 500
+    Out_size = 3
+
+    rnn = RNN(Input_size, H1_size, H2_size,
+              H3_size, Out_size)
+
+    # puting the network in gpu
+    rnn.cuda()
+
+    try:
+
+        rclpy.init()
+
+        global radar_subs, stereo_subs, edge_subs, ard_subs, bridge, store
+
+        radar_subs = radar_substriber()
+        stereo_subs = stereo_substriber()
+        edge_subs = edge_substriber()
+        #ard_subs = ard_substriber()
+        bridge = CvBridge()
+
+        count = 0
+        count2 = 0
+        store = np.zeros((int((height*scaling_factor)*(width*scaling_factor)*2)*2 + len_ard_data), dtype=np.float16)
+
+        h_n = None
+
+        while True:
+            
+            #rclpy.spin_once(ard_subs)
+            rclpy.spin_once(edge_subs)
+            rclpy.spin_once(radar_subs)
+            rclpy.spin_once(stereo_subs)
+
+            # normalization and sensor fusion
+            data_99 = add_image_radar(cv_image,edge_image,radar_data)
+            data_99 = np.reshape(data_99, -1)
+
+            #data_1 = ard_data
+            #please normalize
+            data_1 = [1,2,3]
+
+            data = np.append(data_99, data_1)
+            print(data.shape)
+
+            #make a loop from here
+            output,h_n = rnn(data,h_n)
+
+            print(output)
+
+    except:
+        pass
 
 if __name__ == '__main__':
-    Input_size = 100
-    H1_size = 50
-    H2_size = 40
-    H3_size = 30
-    H4_size = 20
-    H5_size = 10
-    Out_size = 5
-
-    rnn =RNN(Input_size,H1_size,H2_size,H3_size,H4_size,H5_size,Out_size)
-    #print(rnn)
-
-    #load the trained network parameters (edit it for the path and loop)
-    # open a file, where you stored the pickled data
-    file = open('name_of_the_file', 'rb')
-
-    # dump information to that file
-    network_para = pickle.load(file)
-
-    # close the file
-    file.close()
-    
-    #loss func and optimizer
-    criterion = torch.nn.MSELoss()
-    optimizer = torch.optim.Adam(rnn.parameters(), lr =0.1)
-
-    #init for rnn hidden
-    output,h_n = rnn(input_a,None)
-
-    #make a loop from here
-    output1,h = rnn(input_a,h_n)
-    print(output)
+    main()

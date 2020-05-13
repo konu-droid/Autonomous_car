@@ -1,0 +1,18 @@
+[0.568s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial
+[0.817s] running develop
+[0.956s] running egg_info
+[0.957s] writing arduino_serial.egg-info/PKG-INFO
+[0.957s] writing dependency_links to arduino_serial.egg-info/dependency_links.txt
+[0.965s] writing entry points to arduino_serial.egg-info/entry_points.txt
+[0.965s] writing requirements to arduino_serial.egg-info/requires.txt
+[0.965s] writing top-level names to arduino_serial.egg-info/top_level.txt
+[0.982s] reading manifest file 'arduino_serial.egg-info/SOURCES.txt'
+[0.983s] writing manifest file 'arduino_serial.egg-info/SOURCES.txt'
+[0.986s] running build_ext
+[0.987s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages/arduino-serial.egg-link (link to .)
+[0.989s] Installing Arduino_Serial script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/arduino_serial
+[0.989s] Installing Pot_Serial script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/arduino_serial
+[0.990s] 
+[0.990s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial
+[0.990s] running install_data
+[1.020s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial' returned '0': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial

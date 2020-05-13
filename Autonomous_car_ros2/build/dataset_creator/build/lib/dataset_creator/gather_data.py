@@ -19,6 +19,8 @@ import numpy as np
 import pickle
 from time import sleep
 
+scaling_factor = 0.75
+
 # set these according to run_this.py present in stereo_yolo3
 fps = 60
 width = 1280
@@ -27,7 +29,7 @@ len_ard_data = 3
 
 record_length = 500
 
-store_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data'
+store_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data/'
 
 
 class stereo_substriber(Node):
@@ -100,6 +102,10 @@ class radar_substriber(Node):
 
 def add_image_radar(img, img2, radar_data):
 
+    #resized (for a bigger network size)
+    img = cv2.resize(img, (0,0), fx=scaling_factor, fy=scaling_factor)
+    img2 = cv2.resize(img2, (0,0), fx=scaling_factor, fy=scaling_factor)
+
     #For faster compute
     img = img.astype(np.float16)
     img2 = img2.astype(np.float16)
@@ -115,8 +121,8 @@ def add_image_radar(img, img2, radar_data):
     radar_data = radar_data.astype(np.int16)
 
     # adjusting the range
-    radar_data[..., 0][radar_data[..., 0] > height] = height - 1
-    radar_data[..., 1][radar_data[..., 1] > width*2] = width*2 - 1
+    radar_data[..., 0][radar_data[..., 0] > height*scaling_factor] = height*scaling_factor - 1
+    radar_data[..., 1][radar_data[..., 1] > width*scaling_factor*2] = width*scaling_factor*2 - 1
 
     img2[radar_data[..., 0], radar_data[..., 1]] = + radar_data1[..., 2]
 
@@ -144,8 +150,7 @@ def main():
 
         count = 0
         count2 = 0
-        store = np.zeros((record_length, (height*width*2)*2 +
-                          len_ard_data), dtype=np.float16)
+        store = np.zeros((record_length, int((height*scaling_factor)*(width*scaling_factor)*2)*2 + len_ard_data), dtype=np.float16)
 
         while True:
             
@@ -159,6 +164,7 @@ def main():
             data = np.reshape(data_99, -1)
 
             #data_1 = ard_data
+            #please normalize
             data_1 = [1,2,3]
 
             store[count, :] = np.append(data, data_1)

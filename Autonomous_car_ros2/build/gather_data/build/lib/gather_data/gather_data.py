@@ -91,7 +91,6 @@ def main():
     # from the command line, so that the code can do the pickle operation
     # and shutdown properly
 
-    
 
     try:
 

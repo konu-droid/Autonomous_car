@@ -22,6 +22,17 @@ so a normalization was required
 4. Tried to use convolutional layers as well along with rnn but, the result were not good insce the GPU doesnt have much 
 space for that, convolution basically works by creating features maps it dont just compress image, it compresses image
 but it also need a lot of these compressed images ( feature maps ) to work its magic, cant work with just one feature map
+
+
+
+
+TRAININGGGGGGGG!!!!!
+
+** First i was using GPU for training but that allowe the maximum of 60 neurons in second layer
+   with half precision enabled! but the processing speed was too good like 5 frames per second or even more
+** when i make the second layer 300 it take like 45-50 seconds per frame to process since
+  9gb of swap has to be loaded after 16gb of normal ram
+** when the used 200 neurons for layer two the swap was just 5.5gb -6gb and each frame took 5 seconds. good balance
 '''
 
 import torch
@@ -92,11 +103,11 @@ class RNN(nn.Module):
 
 if __name__ == '__main__':
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    #device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(torch.cuda.is_available())
 
     Input_size = int((height*scaling_factor)*(width*scaling_factor*2)*2) + len_ard_data
-    H1_size = 60
+    H1_size = 200
     H2_size = 500
     H3_size = 500
     Out_size = 3
@@ -112,24 +123,25 @@ if __name__ == '__main__':
     # rnn.train()
 
     # puting the network in gpu
-    rnn.cuda()
+    #rnn.half().cuda()
 
     # dump information to this variable
     store = np.zeros((record_length, Input_size), dtype=np.float16)
 
     for i in range(100):
 
-        store = np.load(
-            '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data/'+str(i)+'.npy')
+        store = np.load('/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/Data/'+str(i)+'.npy')
 
         input_a = torch.from_numpy(store)
-        input_a = input_a.reshape(record_length,1, 1, Input_size).half()
+        input_a = input_a.reshape(record_length,1, 1, Input_size).float()
+
+        print(input_a.type())
 
         target = torch.from_numpy(store[:,Input_size-len_ard_data:Input_size])
-        target = target.reshape(record_length,1,1,len_ard_data).half()
+        target = target.reshape(record_length,1,1,len_ard_data).float()
 
         # loss func and optimizer
-        criterion = torch.nn.MSELoss().half()
+        criterion = torch.nn.MSELoss() #.half()
         optimizer = torch.optim.Adam(rnn.parameters(), lr=0.0001)
 
         # make a loop from here
@@ -137,7 +149,7 @@ if __name__ == '__main__':
             with autograd.detect_anomaly():
 
                 # making the model ready for half precission
-                rnn.half()
+                #rnn.half()
 
                 # make the gradiants zero
                 rnn.zero_grad()
@@ -151,7 +163,7 @@ if __name__ == '__main__':
                 target = target.reshape(1, 1, Out_size).half().cuda()
                 '''
 
-                output, h_n = rnn(input_a[j].cuda(), None)
+                output, h_n = rnn(input_a[j], None)
 
                 '''
                 input_a = torch.from_numpy(store[j+1])
@@ -161,12 +173,12 @@ if __name__ == '__main__':
                 target = torch.ones([1, 5], dtype=torch.float16)
                 target = target.reshape(1, 1, Out_size).half().cuda()
                 '''
-
-                output, h_n = rnn(input_a[j+1].cuda(), h_n)
+                    
+                output, h_n = rnn(input_a[j+1], h_n)
 
                 # start training
                 optimizer.zero_grad()
-                loss = criterion(output, target[j+2].cuda())
+                loss = criterion(output, target[j+2])
 
                 print(str(loss) + ' Frame No.:' + str(j) + '\t Batch:' + str(i))
 
@@ -174,7 +186,7 @@ if __name__ == '__main__':
 
                 # optimized doesnt work on well with half(), it makes them nan if i dont convert
                 # the model to float() before doing the optimizer step ( weights update )
-                rnn.float()
+                #rnn.float()
 
                 optimizer.step()
 

@@ -1,0 +1,29 @@
+[2.114s] running develop
+[2.250s] Removing /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain.egg-link (link to .)
+[2.519s] running egg_info
+[2.522s] writing /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/PKG-INFO
+[2.522s] writing dependency_links to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/dependency_links.txt
+[2.522s] writing entry points to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/entry_points.txt
+[2.522s] writing requirements to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/requires.txt
+[2.522s] writing top-level names to /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/top_level.txt
+[2.548s] reading manifest file '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/SOURCES.txt'
+[2.551s] writing manifest file '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/SOURCES.txt'
+[2.551s] running build
+[2.551s] running build_py
+[2.551s] copying brain/rnn_net.py -> /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/build/lib/brain
+[2.551s] copying brain/train.py -> /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/build/lib/brain
+[2.551s] running install
+[2.552s] running install_lib
+[2.552s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain
+[2.552s] copying /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/build/lib/brain/rnn_net.py -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain
+[2.552s] copying /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/build/lib/brain/train.py -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain
+[2.552s] copying /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/build/lib/brain/__init__.py -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain
+[2.552s] byte-compiling /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain/rnn_net.py to rnn_net.cpython-36.pyc
+[2.553s] byte-compiling /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain/train.py to train.cpython-36.pyc
+[2.553s] byte-compiling /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain/__init__.py to __init__.cpython-36.pyc
+[2.553s] running install_data
+[2.554s] running install_egg_info
+[2.555s] Copying /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/python3.6/site-packages/brain-0.0.0-py3.6.egg-info
+[2.561s] running install_scripts
+[2.572s] Installing RNN script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain/lib/brain
+[2.572s] writing list of installed files to '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/install.log'
