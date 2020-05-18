@@ -126,7 +126,7 @@ def add_image_radar(img, img2, radar_data):
 
     img2[radar_data[..., 0], radar_data[..., 1]] = + radar_data1[..., 2]
 
-    data = np.append(img,img2)
+    data = np.append(img,img2,axis=0) #not yet tested this part of axis=0 but it is a must
 
     return data
 
@@ -164,7 +164,6 @@ def main():
             data = np.reshape(data_99, -1)
 
             #data_1 = ard_data
-            #please normalize
             data_1 = [1,2,3]
 
             store[count, :] = np.append(data, data_1)

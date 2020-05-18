@@ -24,3 +24,6 @@ Third Approach:
 * i think this makes more sense since now the endge image data doesnt have to compete with object data which is a huge image with many many meaningful pixels, this approach should help better identify the details in each network.
 * first the output was just single outoput of accel val,breaking val and steering positon val but now each network will create these three values and then we will combine all these values into a fourth network, can amke it deeper and this deeper network can use the data to better output the values of aceel,brake and steeering. 
 
+
+**The third approach is very good! since the gpu training was not possible cause of the huge size of the network and cpu was too slow,
+but now by dividing the network into three parts it has become easy to train on gpu and then also easy to inference
