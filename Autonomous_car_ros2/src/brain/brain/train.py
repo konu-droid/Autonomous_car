@@ -63,7 +63,10 @@ total_data_size = int((height*scaling_factor) *
 
 record_length = 500
 
-save_net_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn_net.pth'
+save_net_path1 = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn1_net.pth'
+save_net_path2 = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn2_net.pth'
+save_net_path3 = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn3_net.pth'
+save_net_path4 = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn4_net.pth'
 
 
 class RNN(nn.Module):
@@ -316,7 +319,9 @@ if __name__ == '__main__':
                   
 
         # saving the training values
-        torch.save(rnn, save_net_path)
-        torch.save(rnn2, save_net_path)
+        torch.save(rnn, save_net_path1)
+        torch.save(rnn2, save_net_path2)
+        torch.save(rnn3, save_net_path3)
+        torch.save(final, save_net_path4)
 
         print(output)
