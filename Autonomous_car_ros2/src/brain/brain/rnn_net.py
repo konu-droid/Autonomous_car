@@ -158,9 +158,7 @@ def add_image_radar(img, img2, radar_data):
 
     img2[radar_data[..., 0], radar_data[..., 1]] = + radar_data1[..., 2]
 
-    data = np.append(img,img2)
-
-    return data
+    return img,img2
 
 
 class RNN(nn.Module):
@@ -194,20 +192,28 @@ class RNN(nn.Module):
 
 def main():
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    print(torch.cuda.is_available())
-
-    Input_size = int((height*scaling_factor)*(width*scaling_factor*2)*2) + len_ard_data
-    H1_size = 60
+    Input_size = int((height*scaling_factor)*(width*scaling_factor*2))
+    H1_size = 300
     H2_size = 500
     H3_size = 500
     Out_size = 3
 
+    final_Input_size = Out_size*3
+    final_H1_size = 10
+    final_H2_size = 10
+    final_H3_size = 10
+
     rnn = RNN(Input_size, H1_size, H2_size,
               H3_size, Out_size)
 
-    # puting the network in gpu
-    rnn.half().cuda()
+    rnn2 = RNN(Input_size, H1_size, H2_size,
+               H3_size, Out_size)
+
+    rnn3 = RNN(len_ard_data, final_H1_size, final_H2_size,
+               final_H3_size, Out_size)
+
+    final = FF(final_Input_size, final_H1_size,
+               final_H2_size, final_H3_size, Out_size)
 
     rclpy.init()
 
@@ -224,6 +230,8 @@ def main():
     store = np.zeros((int((height*scaling_factor)*(width*scaling_factor)*2)*2 + len_ard_data), dtype=np.float16)
 
     h_n = None
+    h_n2 = None
+    h_n3 = None
 
     start = datetime.now()
 
@@ -237,27 +245,34 @@ def main():
         rclpy.spin_once(stereo_subs)
 
         # normalization and sensor fusion
-        data_99 = add_image_radar(cv_image,edge_image,radar_data)
-        data_99 = np.reshape(data_99, -1)
+        input_a,input_b = add_image_radar(cv_image,edge_image,radar_data)
+
+        input_a = torch.from_numpy(input_a)
+        input_a = input_a.reshape(1, 1, Input_size).half().cuda()
+
+        input_b = torch.from_numpy(input_b)
+        input_b = input_b.reshape(1, 1, Input_size).half().cuda()
 
         #data_1 = ard_data
         #please normalize
-        data_1 = [1,2,3]
-
-        data = np.append(data_99, data_1)
-        input = torch.from_numpy(data)
-
-        #this doesnt fill up the gpu ram, since i checked and its only allocated once
-        input = input.reshape(1, 1, Input_size).half()
-
-        input = input.cuda()
+        input_c = [1,2,3]
+        input_c = torch.from_numpy(input_c)
+        input_c = input_c.reshape(1, 1, len_ard_data).half().cuda()
 
 
         #The variables output and h_n were filling up the gpu
         #since these were directly generated they had required_grad = True
         #So with torch.no_grad() helps save the gpu ram by not recording these
         with torch.no_grad():
-            output,h_n = rnn(input,h_n)
+            output_a,h_n = rnn(input_a,h_n)
+            output_b,h_n2 = rnn2(input_b,h_n2)
+            output_c,h_n3 = rnn3(input_c,h_n3)
+
+            #input
+            final_input = torch.cat((output_a,output_b,output_c),1)
+            final_input = final_input.reshape(1, 1, final_Input_size)
+
+            output = final(final_input.cuda())
 
             '''
             #debuging the variable problem
@@ -269,13 +284,6 @@ def main():
         #print("output")
         print(output)
         
-
-        '''
-
-        del output,input
-
-        torch.cuda.empty_cache()
-        '''
 
     done = datetime.now()
 

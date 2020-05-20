@@ -167,9 +167,6 @@ if __name__ == '__main__':
     #rnn = torch.load(save_net_path)
     # rnn.eval()
 
-    # putting the network in gpu
-    rnn.half().cuda()
-
     # dump information to this variable
     store = np.zeros((record_length, total_data_size), dtype=np.float16)
 
@@ -207,13 +204,13 @@ if __name__ == '__main__':
                 rnn.half().cuda()
 
                 # getting input ready
-                output, h_n = rnn(input_a[j].cuda(), None)
+                output_a, h_n = rnn(input_a[j].cuda(), None)
 
-                output, h_n = rnn(input_a[j+1].cuda(), h_n)
+                output_a, h_n = rnn(input_a[j+1].cuda(), h_n)
 
                 # start training
                 optimizer.zero_grad()
-                loss = criterion(output, target[j+2].cuda())
+                loss = criterion(output_a, target[j+2].cuda())
 
                 print(str(loss) + ' Frame No.:' +
                       str(j) + '\t Batch:' + str(i))
@@ -234,13 +231,13 @@ if __name__ == '__main__':
                 rnn2.half().cuda()
 
                 # getting input ready
-                output2, h_n = rnn2(input_b[j].cuda(), None)
+                output_b, h_n = rnn2(input_b[j].cuda(), None)
 
-                output2, h_n = rnn2(input_b[j+1].cuda(), h_n)
+                output_b, h_n = rnn2(input_b[j+1].cuda(), h_n)
 
                 # start training
                 optimizer2.zero_grad()
-                loss = criterion(output2, target[j+2].cuda())
+                loss = criterion(output_b, target[j+2].cuda())
 
                 print(str(loss) + ' Frame No.:' +
                       str(j) + '\t Batch:' + str(i))
@@ -261,13 +258,13 @@ if __name__ == '__main__':
                 rnn3.half().cuda()
 
                 # getting input ready
-                output3, h_n = rnn3(input_c[j].cuda(), None)
+                output_c, h_n = rnn3(input_c[j].cuda(), None)
 
-                output3, h_n = rnn3(input_c[j+1].cuda(), h_n)
+                output_c, h_n = rnn3(input_c[j+1].cuda(), h_n)
 
                 # start training
                 optimizer3.zero_grad()
-                loss = criterion(output3, target[j+2].cuda())
+                loss = criterion(output_c, target[j+2].cuda())
 
                 print(str(loss) + ' Frame No.:' +
                       str(j) + '\t Batch:' + str(i))
@@ -289,20 +286,20 @@ if __name__ == '__main__':
 
                 #detach all the outputs till now
                 #this is so that now the loss.backward() will not track back the other 3 networks
-                output = output.detach()
-                output2 = output2.detach()
-                output3 = output3.detach()
+                output_a = output_a.detach()
+                output_b = output_b.detach()
+                output_c = output_c.detach()
 
-                #input
-                final_input = torch.cat((output,output2,output3),1)
+                #final input
+                final_input = torch.cat((output_a,output_b,output_c),1)
                 final_input = final_input.reshape(1, 1, final_Input_size)
 
-                # getting input ready
-                output4= final(final_input.cuda())
+                
+                output= final(final_input.cuda())
 
                 # start training
                 optimizer4.zero_grad()
-                loss = criterion(output4, target[j+2].cuda())
+                loss = criterion(output, target[j+2].cuda())
 
                 print(str(loss) + ' Frame No.:' +
                       str(j) + '\t Batch:' + str(i))
