@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+GPS/__init__.py
+GPS.egg-info/PKG-INFO
+GPS.egg-info/SOURCES.txt
+GPS.egg-info/dependency_links.txt
+GPS.egg-info/entry_points.txt
+GPS.egg-info/requires.txt
+GPS.egg-info/top_level.txt
+GPS.egg-info/zip-safe
+resource/GPS

@@ -1,33 +1,3 @@
-
-
-
-
-
-
-
-# STILL NOT COMPLETED, SEE TRAIN.PY
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #!/usr/bin/env python3
 from __future__ import print_function
 
@@ -63,6 +33,11 @@ len_ard_data = 3
 record_length = 500
 
 save_net_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn_net.pth'
+
+
+
+
+########################### Subscribers #######################
 
 class stereo_substriber(Node):
     def __init__(self):
@@ -132,6 +107,25 @@ class radar_substriber(Node):
         radar_data = pc2.pointcloud2_to_xyz_array(pointcloud, remove_nans=True)
 
 
+
+
+############################# Publisher ########################
+
+class Car_control_publisher(Node):
+
+    def __init__(self):
+        super().__init__('Car_control_publisher')
+        self.cc_pub = self.create_publisher(Int16MultiArray,'car_control_publisher', 10)
+
+    def car_control_pub(self, data):
+
+        self.cc_pub.publish(data)
+
+
+
+
+############### Function #####################
+
 def add_image_radar(img, img2, radar_data):
 
     #resized (for a bigger network size)
@@ -160,6 +154,9 @@ def add_image_radar(img, img2, radar_data):
 
     return img,img2
 
+
+
+########################### Network Models #########################
 
 class RNN(nn.Module):
     def __init__(self, Input_size, H1_size, H2_size, H3_size, Out_size):
@@ -190,6 +187,33 @@ class RNN(nn.Module):
 
         return out_l, h_n
 
+
+class FF(nn.Module):
+    def __init__(self, Input_size, H1_size, H2_size, H3_size, Out_size):
+        super(FF, self).__init__()
+
+        self.IN = nn.Linear(Input_size, H1_size)
+
+        self.hidden1 = nn.Linear(H1_size, H2_size)
+
+        self.hidden2 = nn.Linear(H2_size, H3_size)
+
+        self.out = nn.Linear(H3_size, Out_size)
+
+    def forward(self, x):
+
+        x = F.relu(self.IN(x))
+
+        x = F.relu(self.hidden1(x))
+
+        x = F.relu(self.hidden2(x))
+        x = self.out(x)
+
+        return x
+
+
+
+
 def main():
 
     Input_size = int((height*scaling_factor)*(width*scaling_factor*2))
@@ -215,19 +239,19 @@ def main():
     final = FF(final_Input_size, final_H1_size,
                final_H2_size, final_H3_size, Out_size)
 
+    out = Int16MultiArray()
+
     rclpy.init()
 
-    global radar_subs, stereo_subs, edge_subs, ard_subs, bridge, store
+    global radar_subs, stereo_subs, edge_subs, ard_subs, bridge
 
     radar_subs = radar_substriber()
     stereo_subs = stereo_substriber()
     edge_subs = edge_substriber()
-    #ard_subs = ard_substriber()
+    ard_subs = ard_substriber()
     bridge = CvBridge()
+    output_pub = Car_control_publisher()
 
-    count = 0
-    count2 = 0
-    store = np.zeros((int((height*scaling_factor)*(width*scaling_factor)*2)*2 + len_ard_data), dtype=np.float16)
 
     h_n = None
     h_n2 = None
@@ -239,7 +263,7 @@ def main():
 
         rnn.zero_grad()
             
-        #rclpy.spin_once(ard_subs)
+        rclpy.spin_once(ard_subs)
         rclpy.spin_once(edge_subs)
         rclpy.spin_once(radar_subs)
         rclpy.spin_once(stereo_subs)
@@ -273,6 +297,11 @@ def main():
             final_input = final_input.reshape(1, 1, final_Input_size)
 
             output = final(final_input.cuda())
+
+            out.data = output
+            print(out.data)
+
+            output_pub.car_control_pub(out)
 
             '''
             #debuging the variable problem

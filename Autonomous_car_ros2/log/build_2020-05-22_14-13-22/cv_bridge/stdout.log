@@ -1,0 +1,45 @@
+[0.595s] [ 12%] Built target gtest_main
+[0.596s] [ 25%] Built target gtest
+[0.597s] [ 43%] Built target cv_bridge
+[0.598s] [ 81%] Built target cv_bridge-utest
+[0.598s] [100%] Built target cv_bridge_boost
+[0.999s] [ 12%] Built target gtest
+[1.003s] [ 25%] Built target gtest_main
+[1.004s] [ 43%] Built target cv_bridge
+[1.039s] [ 62%] Built target cv_bridge_boost
+[1.044s] [100%] Built target cv_bridge-utest
+[1.067s] [36mInstall the project...[0m
+[1.081s] -- Install configuration: ""
+[1.084s] -- Execute custom install script
+[1.084s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/pythonpath.sh
+[1.084s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/pythonpath.dsv
+[1.085s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages/cv_bridge/__init__.py
+[1.085s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages/cv_bridge/core.py
+[1.086s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/libcv_bridge.so
+[1.086s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/include/cv_bridge/cv_bridge_export.h
+[1.086s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages/cv_bridge/boost//cv_bridge_boost.so
+[1.086s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/library_path.sh
+[1.087s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/library_path.dsv
+[1.087s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/include/cv_bridge/cv_bridge.h
+[1.087s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/include/cv_bridge/rgb_colors.h
+[1.087s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/ament_index/resource_index/package_run_dependencies/cv_bridge
+[1.087s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/ament_index/resource_index/parent_prefix_path/cv_bridge
+[1.088s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/ament_prefix_path.sh
+[1.088s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/ament_prefix_path.dsv
+[1.088s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/path.sh
+[1.088s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/environment/path.dsv
+[1.092s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/local_setup.bash
+[1.092s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/local_setup.sh
+[1.093s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/local_setup.zsh
+[1.093s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/local_setup.dsv
+[1.093s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/package.dsv
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/ament_index/resource_index/packages/cv_bridge
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/cmake/cv_bridge-extras.cmake
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/cmake/ament_cmake_export_libraries-extras.cmake
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/cmake/cv_bridgeConfig.cmake
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/cmake/cv_bridgeConfig-version.cmake
+[1.108s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/share/cv_bridge/package.xml
+[1.152s] Listing '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages/cv_bridge'...
+[1.152s] Listing '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages/cv_bridge/boost'...

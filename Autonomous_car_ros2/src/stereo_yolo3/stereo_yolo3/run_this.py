@@ -56,16 +56,6 @@ class my_edge_image_publisher(Node):
             print(e)
 
 
-class brake_publisher(Node):
-
-    def __init__(self):
-        super().__init__('my_brake_pub')
-        self.brke_pub = self.create_publisher(String, 'brake_pub', 10)
-
-    def brake_pub(self, data):
-        self.brke_pub.publish(data)
-
-
 def load_classes(namesfile):
     fp = open(namesfile, "r")
     names = fp.read().split("\n")[:-1]
@@ -170,7 +160,7 @@ def detect_video(model, args):
     print('Detecting...')
     while cap1.isOpened():
         retflag, frame1 = cap1.read()
-        retflag2, frame2 = cap2.read()
+        retflag, frame2 = cap2.read()
         frame = np.concatenate((frame1, frame2), axis=1)
 
         # edge detection
@@ -192,11 +182,6 @@ def detect_video(model, args):
                 detections = transform_result(detections, [frame], input_size)
                 for detection in detections:
                     draw_bbox([frame], detection, colors, classes)
-            '''        
-            else:
-                msg.data = "Move"
-                brake_pubs.brake_pub(msg)
-            '''
 
             if not args.no_show:
                 cv2.imshow('frame', frame)
@@ -300,10 +285,9 @@ def main():
     # ros code
     rclpy.init()
 
-    global stereo_image_pub, bridge, brake_pubs, msg, edge_pubs
+    global stereo_image_pub, bridge, msg, edge_pubs
 
     msg = String()
-    #brake_pubs = brake_publisher()
     stereo_image_pub = my_stereo_image_publisher()
     edge_pubs = my_edge_image_publisher()
     bridge = CvBridge()
@@ -316,7 +300,6 @@ def main():
 
     stereo_image_pub.destroy_node()
     edge_pubs.destroy_node()
-    # brake_pubs.destroy_node()
     rclpy.shutdown()
 
 

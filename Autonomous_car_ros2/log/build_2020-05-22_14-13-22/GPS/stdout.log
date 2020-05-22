@@ -1,0 +1,22 @@
+[1.091s] running develop
+[1.256s] running egg_info
+[1.256s] creating GPS.egg-info
+[1.256s] writing GPS.egg-info/PKG-INFO
+[1.256s] writing dependency_links to GPS.egg-info/dependency_links.txt
+[1.257s] writing entry points to GPS.egg-info/entry_points.txt
+[1.257s] writing requirements to GPS.egg-info/requires.txt
+[1.257s] writing top-level names to GPS.egg-info/top_level.txt
+[1.259s] writing manifest file 'GPS.egg-info/SOURCES.txt'
+[1.312s] reading manifest file 'GPS.egg-info/SOURCES.txt'
+[1.313s] writing manifest file 'GPS.egg-info/SOURCES.txt'
+[1.318s] running build_ext
+[1.318s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/lib/python3.6/site-packages/site.py
+[1.322s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/lib/python3.6/site-packages/GPS.egg-link (link to .)
+[1.322s] 
+[1.322s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/GPS
+[1.322s] running install_data
+[1.322s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/share/ament_index
+[1.322s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/share/ament_index/resource_index
+[1.323s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/share/ament_index/resource_index/packages
+[1.323s] copying resource/GPS -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/share/ament_index/resource_index/packages
+[1.323s] copying package.xml -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/share/GPS
