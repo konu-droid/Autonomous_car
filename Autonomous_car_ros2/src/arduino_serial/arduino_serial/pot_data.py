@@ -8,20 +8,29 @@ from std_msgs.msg import String
 from std_msgs.msg import Int16MultiArray
 from std_msgs.msg import MultiArrayLayout
 
-#python
+# python
 import serial
-from time import sleep 
+from time import sleep
+import numpy as np
 
 number_of_val = 3
 
-ard = serial.Serial('/dev/ttyS0',9600, timeout = 1)
-sleep(0.2)
+ard = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
+
+# Keep this sufficiently high, arduino somtimes takes time to startup, tested and proved
+# since arduino reboots everytime serial.Serial is called
+sleep(5)
+
+# init the array
+array = Int16MultiArray()
+array.data = [0,0,0]
+
 
 class pot_data_publisher(Node):
 
     def __init__(self):
         super().__init__('pot_pubs')
-        self.pot_pubs = self.create_publisher(Int16MultiArray, 'pot_data_pub',10)
+        self.pot_pubs = self.create_publisher(Int16MultiArray, 'pot_data_pub', 10)
 
     def pub(self):
         ard.write(b'm')
@@ -31,27 +40,24 @@ class pot_data_publisher(Node):
 
         print(array)
 
+
         self.pot_pubs.publish(array)
-        
+
 
 def main():
 
     rclpy.init()
 
-    global pot_pubs,array
     pot_pubs = pot_data_publisher()
-
-    #init the array
-    array = Int16MultiArray()
-    array.data = [0,0,0]
-    
-    print(array)
 
     while True:
 
         try:
+
             pot_pubs.pub()
+
         except KeyboardInterrupt:
+
             break
 
     pot_pubs.destroy_node()

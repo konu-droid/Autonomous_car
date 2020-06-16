@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'RNN = brain.rnn_net:main'
+            'RNN = brain.rnn_net:main',
+            'test = brain.test_ard_subs:main'
         ],
     },
 )

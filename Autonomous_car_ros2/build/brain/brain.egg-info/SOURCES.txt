@@ -10,6 +10,7 @@ setup.py
 /home/autonomous-car/Desktop/Autonomous_car_ros2/build/brain/brain.egg-info/zip-safe
 brain/__init__.py
 brain/rnn_net.py
+brain/test_ard_subs.py
 brain/train.py
 brain.egg-info/PKG-INFO
 brain.egg-info/SOURCES.txt

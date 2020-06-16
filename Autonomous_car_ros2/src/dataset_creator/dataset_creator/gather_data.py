@@ -145,7 +145,7 @@ def main():
         radar_subs = radar_substriber()
         stereo_subs = stereo_substriber()
         edge_subs = edge_substriber()
-        #ard_subs = ard_substriber()
+        ard_subs = ard_substriber()
         bridge = CvBridge()
 
         count = 0
@@ -154,7 +154,7 @@ def main():
 
         while True:
             
-            #rclpy.spin_once(ard_subs)
+            rclpy.spin_once(ard_subs)
             rclpy.spin_once(edge_subs)
             rclpy.spin_once(radar_subs)
             rclpy.spin_once(stereo_subs)
@@ -163,8 +163,7 @@ def main():
             data_99 = add_image_radar(cv_image,edge_image,radar_data)
             data = np.reshape(data_99, -1)
 
-            #data_1 = ard_data
-            data_1 = [1,2,3]
+            data_1 = np.array(ard_data.data)
 
             store[count, :] = np.append(data, data_1)
             # print(store)

@@ -1,0 +1,15 @@
+[2.024s] running develop
+[2.176s] running egg_info
+[2.176s] writing dataset_creator.egg-info/PKG-INFO
+[2.177s] writing dependency_links to dataset_creator.egg-info/dependency_links.txt
+[2.177s] writing entry points to dataset_creator.egg-info/entry_points.txt
+[2.177s] writing requirements to dataset_creator.egg-info/requires.txt
+[2.177s] writing top-level names to dataset_creator.egg-info/top_level.txt
+[2.201s] reading manifest file 'dataset_creator.egg-info/SOURCES.txt'
+[2.206s] writing manifest file 'dataset_creator.egg-info/SOURCES.txt'
+[2.208s] running build_ext
+[2.208s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.6/site-packages/dataset-creator.egg-link (link to .)
+[2.209s] Installing gather_data script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/dataset_creator
+[2.209s] 
+[2.209s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator
+[2.209s] running install_data

@@ -1,0 +1,16 @@
+[2.776s] running develop
+[3.532s] running egg_info
+[3.532s] writing arduino_serial.egg-info/PKG-INFO
+[3.533s] writing dependency_links to arduino_serial.egg-info/dependency_links.txt
+[3.533s] writing entry points to arduino_serial.egg-info/entry_points.txt
+[3.578s] writing requirements to arduino_serial.egg-info/requires.txt
+[3.579s] writing top-level names to arduino_serial.egg-info/top_level.txt
+[4.208s] reading manifest file 'arduino_serial.egg-info/SOURCES.txt'
+[4.211s] writing manifest file 'arduino_serial.egg-info/SOURCES.txt'
+[4.213s] running build_ext
+[4.213s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/python3.6/site-packages/arduino-serial.egg-link (link to .)
+[4.214s] Installing Arduino_Serial script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/arduino_serial
+[4.215s] Installing Pot_Serial script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial/lib/arduino_serial
+[4.215s] 
+[4.215s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/arduino_serial
+[4.215s] running install_data

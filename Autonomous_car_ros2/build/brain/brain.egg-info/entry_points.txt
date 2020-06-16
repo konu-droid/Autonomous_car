@@ -1,3 +1,4 @@
 [console_scripts]
 RNN = brain.rnn_net:main
+test = brain.test_ard_subs:main
 
