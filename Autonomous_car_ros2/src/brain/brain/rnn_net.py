@@ -16,6 +16,7 @@ from datetime import datetime
 import numpy as np
 import pickle
 from time import sleep
+import serial 
 
 # lib for NN
 import torch
@@ -34,9 +35,29 @@ record_length = 500
 
 save_net_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn_net.pth'
 
+
 # init the array
 ard_data = Int16MultiArray()
 ard_data.data = [0,0,0]
+
+'''
+ard = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
+
+# Keep this sufficiently high, arduino somtimes takes time to startup, tested and proved
+# since arduino reboots everytime serial.Serial is called
+sleep(5)
+
+ard_data = np.array([0,0,0])
+
+def pub(self):
+    ard.write(b'm')
+    
+    for i in range(number_of_val):
+        ard_data[i] = int(ard.readline().decode())
+    
+    return ard_data
+
+'''
 
 
 ########################### Subscribers #######################
@@ -263,6 +284,7 @@ def main():
     start = datetime.now()
 
     for i in range(500):
+        print(i)
 
         rnn.zero_grad()
         print('b')
@@ -272,7 +294,7 @@ def main():
         print('a')
         rclpy.spin_once(radar_subs)
         print('a')
-        #rclpy.spin_once(ard_subs)
+        rclpy.spin_once(ard_subs)
         print('a')
 
         # normalization and sensor fusion
@@ -286,7 +308,9 @@ def main():
 
         #data_1 = ard_data
         #please normalize
-        input_c = np.array([1,2,3])
+        #input_c = np.array([1,2,3])
+        #input_c = pub()
+        input_c = np.array(ard_data.data)
         input_c = torch.from_numpy(input_c)
         input_c = input_c.reshape(1, 1, len_ard_data).half().cuda()
 
