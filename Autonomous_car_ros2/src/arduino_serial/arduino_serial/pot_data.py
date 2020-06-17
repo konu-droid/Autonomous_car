@@ -32,8 +32,6 @@ class pot_data_publisher(Node):
         super().__init__('pot_pubs')
         self.pot_pubs = self.create_publisher(Int16MultiArray, 'pot_data_pub', 10)
 
-        self.pub()
-
     def pub(self):
         ard.write(b'm')
 
@@ -52,7 +50,11 @@ def main():
 
     pot_pubs = pot_data_publisher()
 
-    rclpy.spin(pot_pubs)
+    while True:
+        try:
+            pot_pubs.pub()
+        except:
+            break
 
     pot_pubs.destroy_node()
     rclpy.shutdown()

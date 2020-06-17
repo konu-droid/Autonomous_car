@@ -11,6 +11,7 @@ setup.py
 arduino_serial/__init__.py
 arduino_serial/accel.py
 arduino_serial/car_contorl.py
+arduino_serial/pot2.py
 arduino_serial/pot_data.py
 arduino_serial.egg-info/PKG-INFO
 arduino_serial.egg-info/SOURCES.txt

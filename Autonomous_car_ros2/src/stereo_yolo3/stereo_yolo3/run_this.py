@@ -291,12 +291,16 @@ def main():
     stereo_image_pub = my_stereo_image_publisher()
     edge_pubs = my_edge_image_publisher()
     bridge = CvBridge()
+    
+    try:
 
-    if args.video:
-        detect_video(model, args)
+        if args.video:
+            detect_video(model, args)
 
-    else:
-        detect_image(model, args)
+        else:
+            detect_image(model, args)
+    except:
+        print('shuting down')
 
     stereo_image_pub.destroy_node()
     edge_pubs.destroy_node()

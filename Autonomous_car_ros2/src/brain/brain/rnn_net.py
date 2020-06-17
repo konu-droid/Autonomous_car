@@ -7,6 +7,7 @@ from rclpy.node import Node
 from std_msgs.msg import String
 from sensor_msgs.msg import Image
 from std_msgs.msg import Int16MultiArray
+from std_msgs.msg import Float64MultiArray
 from sensor_msgs.msg import PointCloud2
 import point_cloud2 as pc2
 from cv_bridge import CvBridge, CvBridgeError
@@ -35,7 +36,7 @@ record_length = 500
 
 save_net_path = '/home/autonomous-car/Desktop/Autonomous_car_ros2/src/data_store/network_store/rnn_net.pth'
 
-
+'''
 # init the array
 ard_data = Int16MultiArray()
 ard_data.data = [0,0,0]
@@ -49,15 +50,14 @@ sleep(5)
 
 ard_data = np.array([0,0,0])
 
-def pub(self):
+def pub():
     ard.write(b'm')
     
-    for i in range(number_of_val):
+    for i in range(len_ard_data):
         ard_data[i] = int(ard.readline().decode())
     
     return ard_data
 
-'''
 
 
 ########################### Subscribers #######################
@@ -262,7 +262,7 @@ def main():
     final = FF(final_Input_size, final_H1_size,
                final_H2_size, final_H3_size, Out_size).half().cuda()
 
-    out = Int16MultiArray()
+    out = Float64MultiArray()
 
     rclpy.init()
 
@@ -271,11 +271,10 @@ def main():
     radar_subs = radar_substriber()
     stereo_subs = stereo_substriber()
     edge_subs = edge_substriber()
-    ard_subs = ard_substriber()
+    #ard_subs = ard_substriber()
     bridge = CvBridge()
     output_pub = Car_control_publisher()
     
-
 
     h_n = None
     h_n2 = None
@@ -287,15 +286,11 @@ def main():
         print(i)
 
         rnn.zero_grad()
-        print('b')
+
         rclpy.spin_once(edge_subs)
-        print('a')
         rclpy.spin_once(stereo_subs)
-        print('a')
         rclpy.spin_once(radar_subs)
-        print('a')
-        rclpy.spin_once(ard_subs)
-        print('a')
+        #rclpy.spin_once(ard_subs)
 
         # normalization and sensor fusion
         input_a,input_b = add_image_radar(cv_image,edge_image,radar_data)
@@ -309,8 +304,9 @@ def main():
         #data_1 = ard_data
         #please normalize
         #input_c = np.array([1,2,3])
-        #input_c = pub()
-        input_c = np.array(ard_data.data)
+        input_c = pub()
+        print(input_c)
+        #input_c = np.array(ard_data.data)
         input_c = torch.from_numpy(input_c)
         input_c = input_c.reshape(1, 1, len_ard_data).half().cuda()
 
@@ -320,21 +316,22 @@ def main():
         #So with torch.no_grad() helps save the gpu ram by not recording these
         with torch.no_grad():
             output_a,h_n = rnn(input_a,h_n)
-            print('b')
             output_b,h_n2 = rnn2(input_b,h_n2)
-            print('a')
             output_c,h_n3 = rnn3(input_c,h_n3)
-            print('a')
 
             #input
             final_input = torch.cat((output_a,output_b,output_c),1)
             final_input = final_input.reshape(1, 1, final_Input_size)
-            print('a')
 
             output = final(final_input.cuda())
 
-            out.data = [1,2,3]
-            print(output)
+            output1 = output.cpu()
+            output1 = output1.numpy()
+            output1 = output1.flatten()
+
+            #out.data = [1,2,3]
+            out.data = output1
+            print(out.data)
 
             output_pub.car_control_pub(out)
 

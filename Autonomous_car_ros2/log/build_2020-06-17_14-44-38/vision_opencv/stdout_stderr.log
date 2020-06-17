@@ -1,0 +1,18 @@
+[0.159s] [36mInstall the project...[0m
+[0.167s] -- Install configuration: ""
+[0.167s] -- Execute custom install script
+[0.168s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/ament_index/resource_index/package_run_dependencies/vision_opencv
+[0.168s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/ament_index/resource_index/parent_prefix_path/vision_opencv
+[0.168s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/ament_prefix_path.sh
+[0.168s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/ament_prefix_path.dsv
+[0.168s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/path.sh
+[0.169s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/environment/path.dsv
+[0.169s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.bash
+[0.169s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.sh
+[0.169s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.zsh
+[0.169s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/local_setup.dsv
+[0.169s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/package.dsv
+[0.177s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/ament_index/resource_index/packages/vision_opencv
+[0.178s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/cmake/vision_opencvConfig.cmake
+[0.178s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/cmake/vision_opencvConfig-version.cmake
+[0.178s] -- Up-to-date symlink: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv/share/vision_opencv/package.xml

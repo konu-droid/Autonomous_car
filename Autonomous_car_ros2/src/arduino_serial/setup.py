@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'Arduino_Serial = arduino_serial.accel:main',
-            'Pot_Serial = arduino_serial.pot_data:main'
+            'Pot_Serial = arduino_serial.pot_data:main',
+            'pots2 = arduino_serial.pot2:main'
         ],
     },
 )

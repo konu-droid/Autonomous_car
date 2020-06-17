@@ -1,0 +1,16 @@
+[0.812s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/GPS': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/GPS/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS
+[1.065s] running develop
+[1.215s] running egg_info
+[1.215s] writing GPS.egg-info/PKG-INFO
+[1.216s] writing dependency_links to GPS.egg-info/dependency_links.txt
+[1.216s] writing entry points to GPS.egg-info/entry_points.txt
+[1.216s] writing requirements to GPS.egg-info/requires.txt
+[1.216s] writing top-level names to GPS.egg-info/top_level.txt
+[1.241s] reading manifest file 'GPS.egg-info/SOURCES.txt'
+[1.241s] writing manifest file 'GPS.egg-info/SOURCES.txt'
+[1.243s] running build_ext
+[1.243s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/lib/python3.6/site-packages/GPS.egg-link (link to .)
+[1.244s] 
+[1.244s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/GPS
+[1.244s] running install_data
+[1.407s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/GPS' returned '0': PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/GPS/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS
