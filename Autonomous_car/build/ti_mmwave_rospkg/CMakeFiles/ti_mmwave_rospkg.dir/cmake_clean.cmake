@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ti_mmwave_rospkg.dir/src/mmWaveLoader.cpp.o"
-  "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg.pdb"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg"
+  "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/ti_mmwave_rospkg/ti_mmwave_rospkg.pdb"
+  "CMakeFiles/ti_mmwave_rospkg.dir/src/mmWaveLoader.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -2,7 +2,7 @@
 
 message(STATUS "ti_mmwave_rospkg: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Iti_mmwave_rospkg:/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iti_mmwave_rospkg:/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,14 +17,14 @@ add_custom_target(ti_mmwave_rospkg_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
-add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" ""
-)
-
 get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
 add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" "std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
+add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ti_mmwave_rospkg" "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" ""
 )
 
 #
@@ -36,7 +36,7 @@ add_custom_target(_ti_mmwave_rospkg_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(ti_mmwave_rospkg
   "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ti_mmwave_rospkg
 )
 
@@ -60,9 +60,9 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_cpp
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
-add_dependencies(ti_mmwave_rospkg_generate_messages_cpp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+add_dependencies(ti_mmwave_rospkg_generate_messages_cpp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_cpp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -77,7 +77,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 _generate_msg_eus(ti_mmwave_rospkg
   "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ti_mmwave_rospkg
 )
 
@@ -101,9 +101,9 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_eus
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
-add_dependencies(ti_mmwave_rospkg_generate_messages_eus _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+add_dependencies(ti_mmwave_rospkg_generate_messages_eus _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_eus _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -118,7 +118,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 _generate_msg_lisp(ti_mmwave_rospkg
   "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ti_mmwave_rospkg
 )
 
@@ -142,9 +142,9 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_lisp
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
-add_dependencies(ti_mmwave_rospkg_generate_messages_lisp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+add_dependencies(ti_mmwave_rospkg_generate_messages_lisp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_lisp _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -159,7 +159,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 _generate_msg_nodejs(ti_mmwave_rospkg
   "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ti_mmwave_rospkg
 )
 
@@ -183,9 +183,9 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_nodejs
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
-add_dependencies(ti_mmwave_rospkg_generate_messages_nodejs _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+add_dependencies(ti_mmwave_rospkg_generate_messages_nodejs _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_nodejs _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -200,7 +200,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ti_mmwave_rospkg_generate_messages_
 _generate_msg_py(ti_mmwave_rospkg
   "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg
 )
 
@@ -224,9 +224,9 @@ add_custom_target(ti_mmwave_rospkg_generate_messages_py
 add_dependencies(ti_mmwave_rospkg_generate_messages ti_mmwave_rospkg_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
-add_dependencies(ti_mmwave_rospkg_generate_messages_py _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/msg/RadarScan.msg" NAME_WE)
+add_dependencies(ti_mmwave_rospkg_generate_messages_py _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/autonomous-car/Desktop/Autonomous_car/src/ti_mmwave_rospkg/srv/mmWaveCLI.srv" NAME_WE)
 add_dependencies(ti_mmwave_rospkg_generate_messages_py _ti_mmwave_rospkg_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -295,7 +295,7 @@ if(TARGET sensor_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg)
-  install(CODE "execute_process(COMMAND \"/usr/bin/python2\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg\")")
+  install(CODE "execute_process(COMMAND \"/usr/bin/python3\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg\")")
   # install generated code
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ti_mmwave_rospkg

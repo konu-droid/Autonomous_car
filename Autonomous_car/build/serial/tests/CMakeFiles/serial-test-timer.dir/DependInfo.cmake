@@ -17,11 +17,12 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/autonomous-car/Desktop/Autonomous_car/src/serial/include"
   "/usr/src/googletest/googletest/include"
+  "/usr/src/googletest/googletest"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/autonomous-car/Desktop/Autonomous_car/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/autonomous-car/Desktop/Autonomous_car/build/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "/home/autonomous-car/Desktop/Autonomous_car/build/serial/CMakeFiles/serial.dir/DependInfo.cmake"
   )
 

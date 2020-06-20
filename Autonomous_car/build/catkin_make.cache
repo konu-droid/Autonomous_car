@@ -1,2 +1,2 @@
-reading_pcl_camera:serial:ti_mmwave_rospkg
+serial:ti_mmwave_rospkg
 -DCATKIN_DEVEL_PREFIX=/home/autonomous-car/Desktop/Autonomous_car/devel -DCMAKE_INSTALL_PREFIX=/home/autonomous-car/Desktop/Autonomous_car/install -G Unix Makefiles

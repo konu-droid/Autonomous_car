@@ -51,7 +51,7 @@ class mmWaveCLIRequest {
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.comm.length;
+    length += _getByteLength(object.comm);
     return length + 4;
   }
 
@@ -124,7 +124,7 @@ class mmWaveCLIResponse {
 
   static getMessageSize(object) {
     let length = 0;
-    length += object.resp.length;
+    length += _getByteLength(object.resp);
     return length + 4;
   }
 

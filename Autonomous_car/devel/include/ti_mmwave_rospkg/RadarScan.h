@@ -142,16 +142,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> >
   : TrueType
   { };
@@ -159,6 +149,16 @@ struct IsMessage< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::ti_mmwave_rospkg::RadarScan_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

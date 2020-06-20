@@ -2,4 +2,4 @@
 source_root_dir = '/home/autonomous-car/Desktop/Autonomous_car/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/autonomous-car/Desktop/Autonomous_car/devel;/opt/ros/melodic'.split(';') if '/home/autonomous-car/Desktop/Autonomous_car/devel;/opt/ros/melodic' != '' else []
+underlay_workspaces = '/opt/ros/noetic'.split(';') if '/opt/ros/noetic' != '' else []

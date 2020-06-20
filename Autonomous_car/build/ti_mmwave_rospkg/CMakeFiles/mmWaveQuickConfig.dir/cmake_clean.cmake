@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mmWaveQuickConfig.dir/src/mmWaveQuickConfig.cpp.o"
-  "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/ti_mmwave_rospkg/mmWaveQuickConfig.pdb"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/ti_mmwave_rospkg/mmWaveQuickConfig"
+  "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/ti_mmwave_rospkg/mmWaveQuickConfig.pdb"
+  "CMakeFiles/mmWaveQuickConfig.dir/src/mmWaveQuickConfig.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
-  "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/serial/serial-test-timer.pdb"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/serial/serial-test-timer"
+  "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/serial/serial-test-timer.pdb"
+  "CMakeFiles/serial-test-timer.dir/unit/unix_timer_tests.cc.o"
 )
 
 # Per-language clean rules from dependency scanning.

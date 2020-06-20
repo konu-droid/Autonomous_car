@@ -87,16 +87,6 @@ namespace message_traits
 
 
 template <class ContainerAllocator>
-struct IsFixedSize< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> >
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
-struct IsFixedSize< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> const>
-  : FalseType
-  { };
-
-template <class ContainerAllocator>
 struct IsMessage< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> >
   : TrueType
   { };
@@ -104,6 +94,16 @@ struct IsMessage< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> >
 template <class ContainerAllocator>
 struct IsMessage< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> const>
   : TrueType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> >
+  : FalseType
+  { };
+
+template <class ContainerAllocator>
+struct IsFixedSize< ::ti_mmwave_rospkg::mmWaveCLIResponse_<ContainerAllocator> const>
+  : FalseType
   { };
 
 template <class ContainerAllocator>

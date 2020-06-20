@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ti_mmwave_rospkg_generate_messages_lisp"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/share/common-lisp/ros/ti_mmwave_rospkg/msg/RadarScan.lisp"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/share/common-lisp/ros/ti_mmwave_rospkg/srv/mmWaveCLI.lisp"
+  "CMakeFiles/ti_mmwave_rospkg_generate_messages_lisp"
 )
 
 # Per-language clean rules from dependency scanning.

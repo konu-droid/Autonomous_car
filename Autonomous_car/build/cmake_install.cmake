@@ -133,7 +133,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/autonomous-car/Desktop/Autonomous_car/build/gtest/cmake_install.cmake")
   include("/home/autonomous-car/Desktop/Autonomous_car/build/serial/cmake_install.cmake")
   include("/home/autonomous-car/Desktop/Autonomous_car/build/ti_mmwave_rospkg/cmake_install.cmake")
-  include("/home/autonomous-car/Desktop/Autonomous_car/build/reading_pcl_camera/cmake_install.cmake")
 
 endif()
 

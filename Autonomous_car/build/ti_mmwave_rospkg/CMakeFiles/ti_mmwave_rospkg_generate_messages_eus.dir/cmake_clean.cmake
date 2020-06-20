@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ti_mmwave_rospkg_generate_messages_eus"
+  "/home/autonomous-car/Desktop/Autonomous_car/devel/share/roseus/ros/ti_mmwave_rospkg/manifest.l"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/share/roseus/ros/ti_mmwave_rospkg/msg/RadarScan.l"
   "/home/autonomous-car/Desktop/Autonomous_car/devel/share/roseus/ros/ti_mmwave_rospkg/srv/mmWaveCLI.l"
-  "/home/autonomous-car/Desktop/Autonomous_car/devel/share/roseus/ros/ti_mmwave_rospkg/manifest.l"
+  "CMakeFiles/ti_mmwave_rospkg_generate_messages_eus"
 )
 
 # Per-language clean rules from dependency scanning.

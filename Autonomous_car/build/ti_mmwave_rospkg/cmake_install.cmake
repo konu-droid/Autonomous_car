@@ -66,11 +66,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/python2.7/dist-packages/ti_mmwave_rospkg")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/python3/dist-packages/ti_mmwave_rospkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/python2.7/dist-packages/ti_mmwave_rospkg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/autonomous-car/Desktop/Autonomous_car/devel/lib/python3/dist-packages/ti_mmwave_rospkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

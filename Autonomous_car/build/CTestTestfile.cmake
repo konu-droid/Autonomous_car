@@ -7,4 +7,3 @@
 subdirs("gtest")
 subdirs("serial")
 subdirs("ti_mmwave_rospkg")
-subdirs("reading_pcl_camera")
