@@ -33,6 +33,7 @@ class my_stereo_image_publisher(Node):
     def __init__(self):
         super().__init__('my_stereo_image_publisher')
         self.img_pub = self.create_publisher(Image, 'stereo_image', 10)
+        self.ed_pub = self.create_publisher(Image, 'edge_image', 10)
 
     def image_pub(self, data):
 
@@ -40,13 +41,6 @@ class my_stereo_image_publisher(Node):
             self.img_pub.publish(bridge.cv2_to_imgmsg(data, "mono8"))
         except CvBridgeError as e:
             print(e)
-
-
-class my_edge_image_publisher(Node):
-
-    def __init__(self):
-        super().__init__('my_edge_image_publisher')
-        self.ed_pub = self.create_publisher(Image, 'edge_image', 10)
 
     def edge_pub(self, data):
 
