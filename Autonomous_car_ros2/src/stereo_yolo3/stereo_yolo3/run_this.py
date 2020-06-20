@@ -30,25 +30,21 @@ desired_width = 1280
 
 class my_stereo_image_publisher(Node):
 
-    def __init__(self):
+    def __init__(self,model,args):
         super().__init__('my_stereo_image_publisher')
         self.img_pub = self.create_publisher(Image, 'stereo_image', 10)
         self.ed_pub = self.create_publisher(Image, 'edge_image', 10)
 
-    def image_pub(self, data):
+    def image_pub(self,data,data2):
 
         try:
             self.img_pub.publish(bridge.cv2_to_imgmsg(data, "mono8"))
         except CvBridgeError as e:
             print(e)
-
-    def edge_pub(self, data):
-
         try:
-            self.ed_pub.publish(bridge.cv2_to_imgmsg(data, "mono8"))
+            self.ed_pub.publish(bridge.cv2_to_imgmsg(data2, "mono8"))
         except CvBridgeError as e:
             print(e)
-
 
 def load_classes(namesfile):
     fp = open(namesfile, "r")
@@ -99,18 +95,6 @@ def draw_bbox(imgs, bbox, colors, classes):
     color = random.choice(colors)
     cv2.rectangle(img, p1, p2, color, 2)
 
-    '''
-    #edited
-    area = (p1[0]-p2[0])*(p1[1]-p2[1])
-    #print(label,area)
-    if(area >= 40000 and label == 'person'):
-        msg.data = "Stop"
-        brake_pubs.brake_pub(msg)
-    else:
-        msg.data = "Move"
-        brake_pubs.brake_pub(msg)
-    '''
-
     text_size = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 1, 1)[0]
     p3 = (p1[0], p1[1] - text_size[1] - 4)
     p4 = (p1[0] + text_size[0] + 4, p1[1])
@@ -146,12 +130,8 @@ def detect_video(model, args):
     print(width)
     print(height)
 
-    fourcc = cv2.VideoWriter_fourcc(*'XVID')
-    out = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
-    read_frames = 0
-
-    start_time = datetime.now()
     print('Detecting...')
+
     while cap1.isOpened():
         retflag, frame1 = cap1.read()
         retflag, frame2 = cap2.read()
@@ -161,7 +141,7 @@ def detect_video(model, args):
         edge = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         edge = cv2.Canny(edge, 100, 200)
 
-        read_frames += 1
+        
         if retflag:
             frame_tensor = cv_image2tensor(frame, input_size).unsqueeze(0)
             frame_tensor = Variable(frame_tensor)
@@ -181,30 +161,19 @@ def detect_video(model, args):
                 cv2.imshow('frame', frame)
 
             gray_scale = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            out.write(frame)
-            stereo_image_pub.image_pub(gray_scale)
-            edge_pubs.edge_pub(edge)
-
-            '''
-            if read_frames % 30 == 0:
-                print('Number of frames processed:', read_frames)
-            '''
+            
+            stereo_image_pub.image_pub(gray_scale,edge)
 
             if not args.no_show and cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         else:
             break
-
-    end_time = datetime.now()
-    print('Detection finished in %s' % (end_time - start_time))
-    print('Total frames:', read_frames)
+    
     cap1.release()
     cap2.release()
-    out.release()
     if not args.no_show:
         cv2.destroyAllWindows()
-
-    print('Detected video saved to ' + output_path)
+    
 
     return
 
@@ -279,25 +248,16 @@ def main():
     # ros code
     rclpy.init()
 
-    global stereo_image_pub, bridge, msg, edge_pubs
+    global stereo_image_pub, bridge
 
-    msg = String()
-    stereo_image_pub = my_stereo_image_publisher()
-    edge_pubs = my_edge_image_publisher()
+    stereo_image_pub = my_stereo_image_publisher(model,args)
     bridge = CvBridge()
     
-    try:
+    detect_video(model,args)
 
-        if args.video:
-            detect_video(model, args)
-
-        else:
-            detect_image(model, args)
-    except:
-        print('shuting down')
+    print('shuting down')
 
     stereo_image_pub.destroy_node()
-    edge_pubs.destroy_node()
     rclpy.shutdown()
 
 
