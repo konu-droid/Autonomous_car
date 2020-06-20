@@ -45,7 +45,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.6/site-packages/image_geometry"
+        "/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.8/site-packages/image_geometry"
       )
 endif()
 

@@ -1,1 +1,0 @@
-[0.018s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge': CMAKE_PREFIX_PATH=/opt/ros/eloquent:${CMAKE_PREFIX_PATH} /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge -- -j6 -l6

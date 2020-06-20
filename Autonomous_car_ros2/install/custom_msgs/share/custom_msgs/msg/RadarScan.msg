@@ -1,1 +1,0 @@
-/home/autonomous-car/Desktop/Autonomous_car_ros2/src/custom_msgs/msg/RadarScan.msg

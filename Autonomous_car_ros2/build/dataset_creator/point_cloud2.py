@@ -238,9 +238,7 @@ def get_xyz_points(cloud_array, remove_nans=True, dtype=np.float):
     points = np.zeros(cloud_array.shape + (3,), dtype=dtype)
     points[...,0] = cloud_array['x'] * 100
     points[...,1] = cloud_array['y'] * 100
-
-    # TO convert the distances to Centimeters
-    #points[...,2] = cloud_array['z'] * 100
+    points[...,2] = cloud_array['z'] * 100
 
     return points
 

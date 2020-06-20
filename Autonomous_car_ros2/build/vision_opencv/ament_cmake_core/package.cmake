@@ -1,5 +1,5 @@
 set(_AMENT_PACKAGE_NAME "vision_opencv")
-set(vision_opencv_VERSION "2.1.4")
+set(vision_opencv_VERSION "2.2.0")
 set(vision_opencv_MAINTAINER "Ethan Gao <ethan.gao@linux.intel.com>")
 set(vision_opencv_BUILD_DEPENDS )
 set(vision_opencv_BUILDTOOL_DEPENDS "ament_cmake")

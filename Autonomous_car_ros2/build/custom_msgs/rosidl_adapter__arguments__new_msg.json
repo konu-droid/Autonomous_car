@@ -1,6 +1,0 @@
-{
-  "package_name": "custom_msgs",
-  "non_idl_tuples": [
-    "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/custom_msgs:msg/RadarScan.msg"
-  ]
-}

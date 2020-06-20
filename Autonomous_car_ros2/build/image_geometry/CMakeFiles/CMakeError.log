@@ -1,210 +1,40 @@
-Determining if the pthread_create exist failed with the following output:
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_30591/fast"
-/usr/bin/make -f CMakeFiles/cmTC_30591.dir/build.make CMakeFiles/cmTC_30591.dir/build
+Run Build Command(s):/usr/bin/make cmTC_fc17c/fast && /usr/bin/make -f CMakeFiles/cmTC_fc17c.dir/build.make CMakeFiles/cmTC_fc17c.dir/build
 make[1]: Entering directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_30591.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_30591.dir/CheckSymbolExists.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_30591
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30591.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_30591.dir/CheckSymbolExists.c.o  -o cmTC_30591 
-CMakeFiles/cmTC_30591.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+Building C object CMakeFiles/cmTC_fc17c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_fc17c.dir/src.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fc17c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc17c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_fc17c.dir/src.c.o  -o cmTC_fc17c 
+/usr/bin/ld: CMakeFiles/cmTC_fc17c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_30591.dir/build.make:97: recipe for target 'cmTC_30591' failed
-make[1]: *** [cmTC_30591] Error 1
+make[1]: *** [CMakeFiles/cmTC_fc17c.dir/build.make:87: cmTC_fc17c] Error 1
 make[1]: Leaving directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_30591/fast' failed
-make: *** [cmTC_30591/fast] Error 2
+make: *** [Makefile:121: cmTC_fc17c/fast] Error 2
 
-File /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
+
+Source file was:
 #include <pthread.h>
 
-int main(int argc, char** argv)
+void* test_func(void* data)
 {
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
+  return data;
 }
 
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_da934/fast"
-/usr/bin/make -f CMakeFiles/cmTC_da934.dir/build.make CMakeFiles/cmTC_da934.dir/build
-make[1]: Entering directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_da934.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_da934.dir/CheckSymbolExists.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_da934
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da934.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_da934.dir/CheckSymbolExists.c.o  -o cmTC_da934 
-CMakeFiles/cmTC_da934.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_da934.dir/build.make:97: recipe for target 'cmTC_da934' failed
-make[1]: *** [cmTC_da934] Error 1
-make[1]: Leaving directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_da934/fast' failed
-make: *** [cmTC_da934/fast] Error 2
-
-File /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
+int main(void)
 {
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
   return 0;
-#endif
-}
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_af18a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_af18a.dir/build.make CMakeFiles/cmTC_af18a.dir/build
-make[1]: Entering directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_af18a.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_af18a.dir/CheckSymbolExists.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_af18a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af18a.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_af18a.dir/CheckSymbolExists.c.o  -o cmTC_af18a 
-CMakeFiles/cmTC_af18a.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_af18a.dir/build.make:97: recipe for target 'cmTC_af18a' failed
-make[1]: *** [cmTC_af18a] Error 1
-make[1]: Leaving directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_af18a/fast' failed
-make: *** [cmTC_af18a/fast] Error 2
-
-File /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_5a24b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5a24b.dir/build.make CMakeFiles/cmTC_5a24b.dir/build
-make[1]: Entering directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5a24b.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_5a24b.dir/CheckSymbolExists.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_5a24b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a24b.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_5a24b.dir/CheckSymbolExists.c.o  -o cmTC_5a24b 
-CMakeFiles/cmTC_5a24b.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_5a24b.dir/build.make:97: recipe for target 'cmTC_5a24b' failed
-make[1]: *** [cmTC_5a24b] Error 1
-make[1]: Leaving directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_5a24b/fast' failed
-make: *** [cmTC_5a24b/fast] Error 2
-
-File /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_1a0c0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1a0c0.dir/build.make CMakeFiles/cmTC_1a0c0.dir/build
-make[1]: Entering directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1a0c0.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_1a0c0.dir/CheckSymbolExists.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_1a0c0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a0c0.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_1a0c0.dir/CheckSymbolExists.c.o  -o cmTC_1a0c0 
-CMakeFiles/cmTC_1a0c0.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_1a0c0.dir/build.make:97: recipe for target 'cmTC_1a0c0' failed
-make[1]: *** [cmTC_1a0c0] Error 1
-make[1]: Leaving directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_1a0c0/fast' failed
-make: *** [cmTC_1a0c0/fast] Error 2
-
-File /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
-}
-
-Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_fc691/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fc691.dir/build.make CMakeFiles/cmTC_fc691.dir/build
-make[1]: Entering directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fc691.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_fc691.dir/CheckSymbolExists.c.o   -c /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_fc691
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc691.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_fc691.dir/CheckSymbolExists.c.o  -o cmTC_fc691 
-CMakeFiles/cmTC_fc691.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_fc691.dir/build.make:97: recipe for target 'cmTC_fc691' failed
-make[1]: *** [cmTC_fc691] Error 1
-make[1]: Leaving directory '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_fc691/fast' failed
-make: *** [cmTC_fc691/fast] Error 2
-
-File /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-/* */
-#include <pthread.h>
-
-int main(int argc, char** argv)
-{
-  (void)argv;
-#ifndef pthread_create
-  return ((int*)(&pthread_create))[argc];
-#else
-  (void)argc;
-  return 0;
-#endif
 }
 

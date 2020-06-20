@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/PKG-INFO
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/SOURCES.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/dependency_links.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/entry_points.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/requires.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/top_level.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/gui.egg-info/zip-safe
 gui/__init__.py
 gui/graphic_ui.py
 gui/reverse_cam.py

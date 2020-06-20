@@ -41,7 +41,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   execute_process(
         COMMAND
         "/usr/bin/python3" "-m" "compileall"
-        "/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.6/site-packages/cv_bridge"
+        "/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.8/site-packages/cv_bridge"
       )
 endif()
 

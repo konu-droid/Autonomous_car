@@ -1,1 +1,1 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/boost/cv_bridge_boost.so" "TARGETS" "cv_bridge_boost" "DESTINATION" "lib/python3.6/site-packages/cv_bridge/boost/")
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/boost/cv_bridge_boost.so" "TARGETS" "cv_bridge_boost" "DESTINATION" "lib/python3.8/site-packages/cv_bridge/boost/")

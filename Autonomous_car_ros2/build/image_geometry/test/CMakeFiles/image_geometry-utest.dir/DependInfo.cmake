@@ -16,9 +16,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry/include"
-  "/opt/ros/eloquent/src/gtest_vendor/include"
-  "/opt/ros/eloquent/include"
-  "/usr/include/opencv"
+  "/opt/ros/foxy/src/gtest_vendor/include"
+  "/usr/include/opencv4"
+  "/opt/ros/foxy/include"
   )
 
 # Targets to which this target links.

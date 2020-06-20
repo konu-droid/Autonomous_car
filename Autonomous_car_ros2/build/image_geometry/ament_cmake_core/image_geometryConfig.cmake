@@ -16,7 +16,7 @@ set(_image_geometry_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT image_geometry_FIND_QUIETLY)
-  message(STATUS "Found image_geometry: 2.1.4 (${image_geometry_DIR})")
+  message(STATUS "Found image_geometry: 2.2.0 (${image_geometry_DIR})")
 endif()
 
 # warn when using a deprecated package
@@ -26,7 +26,10 @@ if(NOT "" STREQUAL "")
   if(NOT "" STREQUAL "TRUE")
     set(_msg "${_msg} ()")
   endif()
-  message(WARNING "${_msg}")
+  # optionally quiet the deprecation message
+  if(NOT ${image_geometry_DEPRECATED_QUIET})
+    message(DEPRECATION "${_msg}")
+  endif()
 endif()
 
 # flag package as ament-based to distinguish it after being find_package()-ed

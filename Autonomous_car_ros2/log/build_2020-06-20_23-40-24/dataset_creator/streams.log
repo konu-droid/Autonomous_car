@@ -1,0 +1,26 @@
+[1.249s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/opt/ros/noetic LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ros/noetic/lib PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.8/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator
+[1.467s] running develop
+[1.597s] running egg_info
+[1.597s] creating dataset_creator.egg-info
+[1.597s] writing dataset_creator.egg-info/PKG-INFO
+[1.597s] writing dependency_links to dataset_creator.egg-info/dependency_links.txt
+[1.597s] writing entry points to dataset_creator.egg-info/entry_points.txt
+[1.597s] writing requirements to dataset_creator.egg-info/requires.txt
+[1.597s] writing top-level names to dataset_creator.egg-info/top_level.txt
+[1.598s] writing manifest file 'dataset_creator.egg-info/SOURCES.txt'
+[1.622s] reading manifest file 'dataset_creator.egg-info/SOURCES.txt'
+[1.622s] writing manifest file 'dataset_creator.egg-info/SOURCES.txt'
+[1.653s] running build_ext
+[1.653s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.8/site-packages/site.py
+[1.655s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.8/site-packages/dataset-creator.egg-link (link to .)
+[1.655s] Installing gather_data script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/dataset_creator
+[1.655s] 
+[1.656s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator
+[1.656s] running install_data
+[1.656s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/share/ament_index
+[1.656s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/share/ament_index/resource_index
+[1.656s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/share/ament_index/resource_index/packages
+[1.656s] copying resource/dataset_creator -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/share/ament_index/resource_index/packages
+[1.656s] copying package.xml -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/share/dataset_creator
+[1.656s] copying launch/record_everything.launch.py -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/share/dataset_creator
+[1.720s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator' returned '0': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/opt/ros/noetic LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ros/noetic/lib PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator/lib/python3.8/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/dataset_creator/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator

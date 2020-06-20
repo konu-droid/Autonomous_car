@@ -1,13 +1,6 @@
 package.xml
 setup.cfg
 setup.py
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/PKG-INFO
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/SOURCES.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/dependency_links.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/entry_points.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/requires.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/top_level.txt
-/home/autonomous-car/Desktop/Autonomous_car_ros2/build/stereo_yolo3/stereo_yolo3.egg-info/zip-safe
 resource/stereo_yolo3
 stereo_yolo3/__init__.py
 stereo_yolo3/run_this.py

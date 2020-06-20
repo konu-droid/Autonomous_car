@@ -240,7 +240,7 @@ function(ament_cmake_symlink_install_targets)
     get_filename_component(fileext "${file}" EXT)
     if(fileext STREQUAL ".a" OR fileext STREQUAL ".lib")
       set(destination "${ARG_ARCHIVE_DESTINATION}")
-    elseif(fileext STREQUAL ".dylib" OR fileext STREQUAL ".so")
+    elseif(fileext STREQUAL ".dylib" OR fileext MATCHES "\\.so(\\.[0-9]+)?(\\.[0-9]+)?(\\.[0-9]+)?$")
       set(destination "${ARG_LIBRARY_DESTINATION}")
     elseif(fileext STREQUAL "" OR fileext STREQUAL ".dll" OR fileext STREQUAL ".exe")
       set(destination "${ARG_RUNTIME_DESTINATION}")
@@ -316,8 +316,8 @@ ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_r
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/cv_bridge/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/cv_bridge/environment")
 
-# install(DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python/cv_bridge/" "DESTINATION" "lib/python3.6/site-packages/cv_bridge" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python" DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python/cv_bridge/" "DESTINATION" "lib/python3.6/site-packages/cv_bridge" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python/cv_bridge/" "DESTINATION" "lib/python3.8/site-packages/cv_bridge" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python" DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/python/cv_bridge/" "DESTINATION" "lib/python3.8/site-packages/cv_bridge" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install("TARGETS" "cv_bridge" "DESTINATION" "lib")
 include("/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
@@ -325,11 +325,11 @@ include("/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/am
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/cv_bridge/cv_bridge_export.h" "DESTINATION" "include/cv_bridge")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/src" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/cv_bridge/cv_bridge_export.h" "DESTINATION" "include/cv_bridge")
 
-# install("TARGETS" "cv_bridge_boost" "DESTINATION" "lib/python3.6/site-packages/cv_bridge/boost/")
+# install("TARGETS" "cv_bridge_boost" "DESTINATION" "lib/python3.8/site-packages/cv_bridge/boost/")
 include("/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/src/ament_cmake_symlink_install_targets_1_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/opt/ros/eloquent/lib/python3.6/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/cv_bridge/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/opt/ros/eloquent/lib/python3.6/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/cv_bridge/environment")
+# install(FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/cv_bridge/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/cv_bridge/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/cv_bridge/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/cv_bridge/environment")
@@ -343,14 +343,14 @@ ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_r
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cv_bridge" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cv_bridge" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cv_bridge/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cv_bridge/environment")
+# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cv_bridge/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cv_bridge/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cv_bridge/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/cv_bridge/environment")
 
-# install(FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cv_bridge/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cv_bridge/environment")
+# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cv_bridge/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cv_bridge/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cv_bridge/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/cv_bridge/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/cv_bridge/environment")

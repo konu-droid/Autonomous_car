@@ -2,8 +2,14 @@
 Changelog for package cv_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-2.1.4 (2020-01-17)
+2.2.0 (2020-05-27)
 ------------------
+* Disable portable image tests (`#337 <https://github.com/ros-perception/vision_opencv/issues/337>`_)
+* use more specific boost rosdep keys (`#319 <https://github.com/ros-perception/vision_opencv/issues/319>`_)
+* add opencv4 into the dependency list for ROS2 (`#324 <https://github.com/ros-perception/vision_opencv/issues/324>`_)
+* Corrected the typo of Boost_INCLUDE_DIRS (`#315 <https://github.com/ros-perception/vision_opencv/issues/315>`_)
+* use target include directories (`#313 <https://github.com/ros-perception/vision_opencv/issues/313>`_)
+* Contributors: Karsten Knese, Lewis Liu, Michael Carroll, Mikael Arguedas, Sean Yen
 
 2.1.3 (2019-10-23)
 ------------------

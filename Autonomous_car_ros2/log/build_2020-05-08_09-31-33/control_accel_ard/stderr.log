@@ -1,5 +1,0 @@
-[1.556s]   File "/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard/lib/python3.6/site-packages/control_accel_ard/recv_data.py", line 21
-[1.556s]     if __name__ = '__main__':
-[1.556s]                 ^
-[1.556s] SyntaxError: invalid syntax
-[1.556s] 

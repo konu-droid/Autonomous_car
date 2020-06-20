@@ -240,7 +240,7 @@ function(ament_cmake_symlink_install_targets)
     get_filename_component(fileext "${file}" EXT)
     if(fileext STREQUAL ".a" OR fileext STREQUAL ".lib")
       set(destination "${ARG_ARCHIVE_DESTINATION}")
-    elseif(fileext STREQUAL ".dylib" OR fileext STREQUAL ".so")
+    elseif(fileext STREQUAL ".dylib" OR fileext MATCHES "\\.so(\\.[0-9]+)?(\\.[0-9]+)?(\\.[0-9]+)?$")
       set(destination "${ARG_LIBRARY_DESTINATION}")
     elseif(fileext STREQUAL "" OR fileext STREQUAL ".dll" OR fileext STREQUAL ".exe")
       set(destination "${ARG_RUNTIME_DESTINATION}")
@@ -316,14 +316,14 @@ ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_r
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/vision_opencv" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/vision_opencv" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vision_opencv/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vision_opencv/environment")
+# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vision_opencv/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/vision_opencv/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/vision_opencv/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/vision_opencv/environment")
 
-# install(FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vision_opencv/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vision_opencv/environment")
+# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vision_opencv/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/vision_opencv/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/vision_opencv/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/vision_opencv" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/vision_opencv/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/vision_opencv/environment")

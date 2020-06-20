@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cv_bridge-utest.dir/test_endian.cpp.o"
   "CMakeFiles/cv_bridge-utest.dir/test_compression.cpp.o"
+  "CMakeFiles/cv_bridge-utest.dir/test_endian.cpp.o"
+  "CMakeFiles/cv_bridge-utest.dir/test_rgb_colors.cpp.o"
   "CMakeFiles/cv_bridge-utest.dir/utest.cpp.o"
   "CMakeFiles/cv_bridge-utest.dir/utest2.cpp.o"
-  "CMakeFiles/cv_bridge-utest.dir/test_rgb_colors.cpp.o"
-  "cv_bridge-utest.pdb"
   "cv_bridge-utest"
+  "cv_bridge-utest.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

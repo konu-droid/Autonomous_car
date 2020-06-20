@@ -14,16 +14,18 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ALL_NO_LIB"
+  "BOOST_PYTHON_DYN_LINK"
   "ROS_PACKAGE_NAME=\"cv_bridge\""
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/include"
-  "/opt/ros/eloquent/src/gtest_vendor/include"
+  "/opt/ros/foxy/src/gtest_vendor/include"
   "src"
-  "/opt/ros/eloquent/include"
-  "/usr/include/opencv"
+  "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/cv_bridge/include"
+  "/usr/include/opencv4"
+  "/opt/ros/foxy/include"
   )
 
 # Targets to which this target links.

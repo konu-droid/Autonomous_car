@@ -1,5 +1,5 @@
 set(_AMENT_PACKAGE_NAME "image_geometry")
-set(image_geometry_VERSION "2.1.4")
+set(image_geometry_VERSION "2.2.0")
 set(image_geometry_MAINTAINER "Mikael Arguedas <mikael@osrfoundation.org>")
 set(image_geometry_BUILD_DEPENDS "libopencv-dev" "sensor_msgs")
 set(image_geometry_BUILDTOOL_DEPENDS "ament_cmake_python" "ament_cmake_ros")

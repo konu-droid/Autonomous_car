@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs/libnew_msg__rosidl_typesupport_fastrtps_c.so" "TARGETS" "new_msg__rosidl_typesupport_fastrtps_c" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

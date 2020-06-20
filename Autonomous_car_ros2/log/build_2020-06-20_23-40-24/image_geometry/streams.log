@@ -1,0 +1,93 @@
+[0.038s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GUI:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry
+[0.442s] -- The C compiler identification is GNU 9.3.0
+[0.442s] -- The CXX compiler identification is GNU 9.3.0
+[0.442s] -- Check for working C compiler: /usr/bin/cc
+[0.442s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.442s] -- Detecting C compiler ABI info
+[0.442s] -- Detecting C compiler ABI info - done
+[0.442s] -- Detecting C compile features
+[0.442s] -- Detecting C compile features - done
+[0.443s] -- Check for working CXX compiler: /usr/bin/c++
+[0.443s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.443s] -- Detecting CXX compiler ABI info
+[0.443s] -- Detecting CXX compiler ABI info - done
+[0.450s] -- Detecting CXX compile features
+[0.451s] -- Detecting CXX compile features - done
+[0.457s] -- Found ament_cmake_python: 0.9.5 (/opt/ros/foxy/share/ament_cmake_python/cmake)
+[0.457s] -- Found ament_cmake_ros: 0.9.0 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[0.483s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.2", minimum required is "3") 
+[0.483s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.639s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.691s] -- Found OpenCV: /usr (found version "4.2.0") found components: calib3d core highgui imgproc 
+[0.692s] -- Found sensor_msgs: 2.0.1 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.709s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.711s] -- Found rosidl_adapter: 1.0.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.801s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.835s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.907s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.063s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[1.063s] -- Looking for pthread.h
+[1.129s] -- Looking for pthread.h - found
+[1.129s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.197s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.198s] -- Check if compiler accepts -pthread
+[1.263s] -- Check if compiler accepts -pthread - yes
+[1.264s] -- Found Threads: TRUE  
+[1.316s] -- Configuring done
+[1.328s] -- Generating done
+[1.329s] -- Build files have been written to: /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry
+[1.337s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GUI:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake /home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry
+[1.339s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GUI:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry -- -j6 -l6
+[1.382s] [35m[1mScanning dependencies of target gtest[0m
+[1.384s] [35m[1mScanning dependencies of target gtest_main[0m
+[1.385s] [35m[1mScanning dependencies of target image_geometry[0m
+[1.396s] [ 22%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[1.396s] [ 22%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[1.422s] [ 33%] [32mBuilding CXX object CMakeFiles/image_geometry.dir/src/stereo_camera_model.cpp.o[0m
+[1.424s] [ 44%] [32mBuilding CXX object CMakeFiles/image_geometry.dir/src/pinhole_camera_model.cpp.o[0m
+[2.009s] [ 55%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[2.050s] [ 55%] Built target gtest_main
+[2.351s] [ 66%] [32m[1mLinking CXX shared library libimage_geometry.so[0m
+[2.456s] [ 66%] Built target image_geometry
+[3.929s] [ 77%] [32m[1mLinking CXX static library libgtest.a[0m
+[3.978s] [ 77%] Built target gtest
+[3.987s] [35m[1mScanning dependencies of target image_geometry-utest[0m
+[4.028s] [ 88%] [32mBuilding CXX object test/CMakeFiles/image_geometry-utest.dir/utest.cpp.o[0m
+[5.182s] [100%] [32m[1mLinking CXX executable image_geometry-utest[0m
+[5.344s] [100%] Built target image_geometry-utest
+[5.355s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GUI:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --build /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry -- -j6 -l6
+[5.386s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GUI:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --install /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry
+[5.392s] -- Install configuration: ""
+[5.392s] -- Execute custom install script
+[5.392s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/pythonpath.sh
+[5.401s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/pythonpath.dsv
+[5.409s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.8/site-packages/image_geometry/__init__.py
+[5.417s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.8/site-packages/image_geometry/cameramodels.py
+[5.424s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/include/image_geometry/pinhole_camera_model.h
+[5.431s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/include/image_geometry/stereo_camera_model.h
+[5.439s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/include/image_geometry/visibility_control.hpp
+[5.447s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/libimage_geometry.so
+[5.455s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/library_path.sh
+[5.464s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/library_path.dsv
+[5.471s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/ament_index/resource_index/package_run_dependencies/image_geometry
+[5.478s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/ament_index/resource_index/parent_prefix_path/image_geometry
+[5.484s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/ament_prefix_path.sh
+[5.491s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/ament_prefix_path.dsv
+[5.498s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/path.sh
+[5.505s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/environment/path.dsv
+[5.511s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.bash
+[5.518s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.sh
+[5.525s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.zsh
+[5.533s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/local_setup.dsv
+[5.543s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/package.dsv
+[5.551s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/ament_index/resource_index/packages/image_geometry
+[5.558s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_libraries-extras.cmake
+[5.565s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.572s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.578s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/image_geometryConfig.cmake
+[5.585s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/cmake/image_geometryConfig-version.cmake
+[5.592s] -- Symlinking: /home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/share/image_geometry/package.xml
+[5.624s] Listing '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.8/site-packages/image_geometry'...
+[5.625s] Compiling '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.8/site-packages/image_geometry/__init__.py'...
+[5.625s] Compiling '/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib/python3.8/site-packages/image_geometry/cameramodels.py'...
+[5.630s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry' returned '0': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/stereo_yolo3:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/opencv_tests:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/dataset_creator:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/brain:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/Gather_data:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/control_accel_ard:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/arduino_serial:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GUI:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/GPS:/opt/ros/foxy:/opt/ros/noetic /usr/bin/cmake --install /home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry

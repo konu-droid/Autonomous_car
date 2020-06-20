@@ -1,0 +1,26 @@
+[1.241s] Invoking command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/opt/ros/noetic LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ros/noetic/lib PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/python3.8/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui
+[1.450s] running develop
+[1.567s] running egg_info
+[1.567s] creating gui.egg-info
+[1.568s] writing gui.egg-info/PKG-INFO
+[1.568s] writing dependency_links to gui.egg-info/dependency_links.txt
+[1.568s] writing entry points to gui.egg-info/entry_points.txt
+[1.568s] writing requirements to gui.egg-info/requires.txt
+[1.568s] writing top-level names to gui.egg-info/top_level.txt
+[1.569s] writing manifest file 'gui.egg-info/SOURCES.txt'
+[1.596s] reading manifest file 'gui.egg-info/SOURCES.txt'
+[1.596s] writing manifest file 'gui.egg-info/SOURCES.txt'
+[1.628s] running build_ext
+[1.628s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/python3.8/site-packages/site.py
+[1.629s] Creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/python3.8/site-packages/gui.egg-link (link to .)
+[1.630s] Installing gui script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/gui
+[1.630s] Installing rev_cam script to /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/gui
+[1.630s] 
+[1.630s] Installed /home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui
+[1.630s] running install_data
+[1.631s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/share/ament_index
+[1.631s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/share/ament_index/resource_index
+[1.631s] creating /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/share/ament_index/resource_index/packages
+[1.631s] copying resource/gui -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/share/ament_index/resource_index/packages
+[1.631s] copying package.xml -> /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/share/gui
+[1.691s] Invoked command in '/home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui' returned '0': CMAKE_PREFIX_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/vision_opencv:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs:/opt/ros/noetic LD_LIBRARY_PATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/image_geometry/lib:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/custom_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/opt/ros/noetic/lib PYTHONPATH=/home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui/lib/python3.8/site-packages:/home/autonomous-car/Desktop/Autonomous_car_ros2/install/cv_bridge/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui --editable --build-directory /home/autonomous-car/Desktop/Autonomous_car_ros2/build/gui/build --no-deps install_data --install-dir /home/autonomous-car/Desktop/Autonomous_car_ros2/install/gui

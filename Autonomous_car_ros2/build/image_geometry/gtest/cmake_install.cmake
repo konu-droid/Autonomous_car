@@ -1,4 +1,4 @@
-# Install script for directory: /opt/ros/eloquent/src/gtest_vendor
+# Install script for directory: /opt/ros/foxy/src/gtest_vendor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

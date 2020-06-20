@@ -240,7 +240,7 @@ function(ament_cmake_symlink_install_targets)
     get_filename_component(fileext "${file}" EXT)
     if(fileext STREQUAL ".a" OR fileext STREQUAL ".lib")
       set(destination "${ARG_ARCHIVE_DESTINATION}")
-    elseif(fileext STREQUAL ".dylib" OR fileext STREQUAL ".so")
+    elseif(fileext STREQUAL ".dylib" OR fileext MATCHES "\\.so(\\.[0-9]+)?(\\.[0-9]+)?(\\.[0-9]+)?$")
       set(destination "${ARG_LIBRARY_DESTINATION}")
     elseif(fileext STREQUAL "" OR fileext STREQUAL ".dll" OR fileext STREQUAL ".exe")
       set(destination "${ARG_RUNTIME_DESTINATION}")
@@ -316,8 +316,8 @@ ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_r
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/image_geometry/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/image_geometry/environment")
 
-# install(DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry/image_geometry/" "DESTINATION" "lib/python3.6/site-packages/image_geometry" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry/image_geometry/" "DESTINATION" "lib/python3.6/site-packages/image_geometry" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry/image_geometry/" "DESTINATION" "lib/python3.8/site-packages/image_geometry" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" DIRECTORY "/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry/image_geometry/" "DESTINATION" "lib/python3.8/site-packages/image_geometry" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install(DIRECTORY "include/image_geometry/" "DESTINATION" "include/image_geometry")
 ament_cmake_symlink_install_directory("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" DIRECTORY "include/image_geometry/" "DESTINATION" "include/image_geometry")
@@ -325,8 +325,8 @@ ament_cmake_symlink_install_directory("/home/autonomous-car/Desktop/Autonomous_c
 # install("TARGETS" "image_geometry" "RUNTIME_DESTINATION" "bin" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib")
 include("/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
-# install(FILES "/opt/ros/eloquent/lib/python3.6/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/image_geometry/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/opt/ros/eloquent/lib/python3.6/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/image_geometry/environment")
+# install(FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/image_geometry/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/opt/ros/foxy/lib/python3.8/site-packages/ament_package/template/environment_hook/library_path.sh" "DESTINATION" "share/image_geometry/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/image_geometry/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/library_path.dsv" "DESTINATION" "share/image_geometry/environment")
@@ -337,14 +337,14 @@ ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_r
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/image_geometry" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/image_geometry" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
-# install(FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/image_geometry/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/image_geometry/environment")
+# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/image_geometry/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/image_geometry/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/image_geometry/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/image_geometry/environment")
 
-# install(FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/image_geometry/environment")
-ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/opt/ros/eloquent/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/image_geometry/environment")
+# install(FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/image_geometry/environment")
+ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/opt/ros/foxy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/image_geometry/environment")
 
 # install(FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/image_geometry/environment")
 ament_cmake_symlink_install_files("/home/autonomous-car/Desktop/Autonomous_car_ros2/src/vision_opencv/image_geometry" FILES "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/image_geometry/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/image_geometry/environment")

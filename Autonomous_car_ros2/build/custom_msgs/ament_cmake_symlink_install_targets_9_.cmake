@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/autonomous-car/Desktop/Autonomous_car_ros2/build/custom_msgs/rosidl_generator_py/custom_msgs/libnew_msg__python.so" "TARGETS" "new_msg__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

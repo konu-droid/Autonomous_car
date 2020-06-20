@@ -39,4 +39,4 @@
 #  endif
 #endif
 
-#endif
+#endif /* CV_BRIDGE_EXPORT_H */

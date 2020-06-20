@@ -1,7 +1,12 @@
 package.xml
 setup.cfg
 setup.py
+GPS/Final_Nano_code.py
+GPS/Kilo_meters_final_test.py
 GPS/__init__.py
+GPS/directionsGUI_update.py
+GPS/final_test_code.py
+GPS/pulkit_firebase.py
 GPS.egg-info/PKG-INFO
 GPS.egg-info/SOURCES.txt
 GPS.egg-info/dependency_links.txt
