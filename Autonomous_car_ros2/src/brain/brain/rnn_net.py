@@ -58,87 +58,55 @@ def pub():
     
     return ard_data
 
-
-
-########################### Subscribers #######################
-
-class stereo_substriber(Node):
+class brain_rnn(Node):
     def __init__(self):
-        super().__init__('stereo_graber')
+        super().__init__('brain_working')
 
         # reading stereo image data
         self.stereo_sub = self.create_subscription(
             Image, '/stereo_image', self.stereo_callback, 10)
 
+        # reading stereo image data
+        self.edge_sub = self.create_subscription(
+            Image, '/edge_image', self.edge_callback, 10)
+
+        # reading arduino data
+        self.ard_sub = self.create_subscription(
+            Int16MultiArray, '/pot_data_pub', self.ard_callback, 10)
+
+        # reading radar data from ros1
+        self.radar_sub = self.create_subscription(
+            PointCloud2, '/ti_mmwave/radar_scan_pcl', self.radar_callback, 10)
+
+        # Publisher
+        self.cc_pub = self.create_publisher(Int16MultiArray,'car_control_publisher', 10)
+
         # To prevent unused variable warning
         self.stereo_sub
+        self.edge_sub
+        self.ard_sub
+        self.radar_sub
 
     def stereo_callback(self, data):
         bridge = CvBridge()
         global cv_image
         cv_image = bridge.imgmsg_to_cv2(data, "mono8")
 
-
-class edge_substriber(Node):
-    def __init__(self):
-        super().__init__('edge_graber')
-
-        # reading stereo image data
-        self.edge_sub = self.create_subscription(
-            Image, '/edge_image', self.edge_callback, 10)
-
-        # To prevent unused variable warning
-        self.edge_sub
-
     def edge_callback(self, data):
         bridge = CvBridge()
         global edge_image
         edge_image = bridge.imgmsg_to_cv2(data, "mono8")
 
-
-class ard_substriber(Node):
-    def __init__(self):
-        super().__init__('ard_grabber')
-
-        # reading arduino data
-        self.ard_sub = self.create_subscription(
-            Int16MultiArray, '/pot_data_pub', self.ard_callback, 10)
-
-        # To prevent unused variable warning
-        self.ard_sub
-
     def ard_callback(self, data):
         global ard_data
         ard_data = data
 
-
-class radar_substriber(Node):
-    def __init__(self):
-        super().__init__('radar_graber')
-        # reading radar data from ros1
-        self.radar_sub = self.create_subscription(
-            PointCloud2, '/ti_mmwave/radar_scan_pcl', self.radar_callback, 10)
-
-        # To prevent unused variable warning
-        self.radar_sub
-
     def radar_callback(self, pointcloud):
         # we will only store the x,y,z values
-
         # print(pointcloud.data)
         global radar_data
         radar_data = pc2.pointcloud2_to_xyz_array(pointcloud, remove_nans=True)
 
-
-
-
-############################# Publisher ########################
-
-class Car_control_publisher(Node):
-
-    def __init__(self):
-        super().__init__('Car_control_publisher')
-        self.cc_pub = self.create_publisher(Int16MultiArray,'car_control_publisher', 10)
 
     def car_control_pub(self, data):
 
@@ -266,14 +234,10 @@ def main():
 
     rclpy.init()
 
-    global radar_subs, stereo_subs, edge_subs, ard_subs, bridge
+    global brain, bridge
 
-    radar_subs = radar_substriber()
-    stereo_subs = stereo_substriber()
-    edge_subs = edge_substriber()
-    #ard_subs = ard_substriber()
+    brain = brain_rnn()
     bridge = CvBridge()
-    output_pub = Car_control_publisher()
     
 
     h_n = None
@@ -287,10 +251,7 @@ def main():
 
         rnn.zero_grad()
 
-        rclpy.spin_once(edge_subs)
-        rclpy.spin_once(stereo_subs)
-        rclpy.spin_once(radar_subs)
-        #rclpy.spin_once(ard_subs)
+        rclpy.spin_once(brian)
 
         # normalization and sensor fusion
         input_a,input_b = add_image_radar(cv_image,edge_image,radar_data)
@@ -333,7 +294,7 @@ def main():
             out.data = output1
             print(out.data)
 
-            output_pub.car_control_pub(out)
+            brian.car_control_pub(out)
 
             '''
             #debuging the variable problem
@@ -347,6 +308,8 @@ def main():
         
 
     done = datetime.now()
+    brain.destroy_node()
+    rclpy.shutdown()
 
     time_taken = done - start
     print(str(time_taken) + "  Divide by 300")

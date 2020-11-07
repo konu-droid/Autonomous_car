@@ -1,4 +1,7 @@
 {
-    "python.pythonPath": "/usr/bin/python3",
-    "ros.distro": "foxy"
+    "python.autoComplete.extraPaths": [
+        "/home/konu/Desktop/Balancing_ws/build/Neural_brain",
+        "/home/konu/Desktop/Balancing_ws/install/Neural_brain/lib/python3.8/site-packages",
+        "/opt/ros/foxy/lib/python3.8/site-packages"
+    ]
 }
